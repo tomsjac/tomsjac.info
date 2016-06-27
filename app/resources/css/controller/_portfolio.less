@@ -1,0 +1,685 @@
+@charset "UTF-8";
+/**
+ *  Contenu  de la page Portfolio
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+body > div#circle > div#content > section#content-portfolio{
+
+	header{
+		h2{
+			font-size:1.6em;
+		}
+		
+		section{
+			margin-top:10px;
+			margin-bottom:-10px;
+			text-align:center;
+			color:#7b7b7b;
+			font-family:doctor_soos;
+			font-size:1.3em;
+			ul{
+				width:380px;
+				margin:0px auto;
+				padding:0;
+				list-style:none;
+				li{
+					display:inline-block;
+					&:after{
+						content:'-';
+						padding:0 8px 0 10px;
+					}
+					&:last-child:after{content:'';}
+				}
+			}
+		
+		}
+	}
+	
+	article{
+		position:relative;
+		margin:-20px 0 0 0px;
+		
+		div#listProj{
+			position:relative;
+			overflow-x: hidden;
+			margin-left:2%;
+			
+			ul{
+				width: 500%;
+				clear:both;
+				list-style:none;
+				padding:0;
+				margin:0;
+
+			
+				li{
+					float:left;
+					width: 21%;
+					padding:0 0 0 1.2%;
+					margin:0;
+					overflow: hidden;
+					
+					figure{
+						position:relative;
+						float:left;
+						margin:5% 5%;
+						background: #ffffff; /* Old browsers */
+						background: -moz-linear-gradient(top,  #ffffff 90%, #f0f0f0 100%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(90%,#ffffff), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(top,  #ffffff 90%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(top,  #ffffff 90%,#f0f0f0 100%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(top,  #ffffff 90%,#f0f0f0 100%); /* IE10+ */
+						background: linear-gradient(to bottom,  #ffffff 90%,#f0f0f0 100%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+						border:2px #e3e3e3 solid;
+						
+						a{
+							display:block;
+							text-decoration:none;
+							.transition(all 0.5s ease-in-out);
+							img{
+                                width:134px;
+                                height:98px;
+								padding:10px 10px 0px 10px;
+							}
+							
+							figcaption{
+								font-family:bebas_neueregular;
+								letter-spacing:0.1em;
+								
+								p,h3{
+									margin:0;
+									padding:0;
+									text-align:center;
+									margin-bottom:3px;
+								}
+								
+								p{
+									font-size:1em;
+									color:#7e9500;
+								}
+								
+								h3{
+									font-size:1.2em;
+									color:#58585d;
+								}
+								
+							}
+							&:after{
+								content: '';
+								top:0;
+								font-family:fontello;
+								.transition(all 0.5s ease-in-out);
+							}
+							&:hover{
+								&:after{
+									content: '\e705';
+									position:absolute;
+									top:0;
+									left:0;
+									margin:10px auto 0 auto;
+									width:98%;
+									height:100px;
+
+									font-size:7em;
+									text-align:center;
+									color:#8EC6FF;
+									background-color:#FFF;
+									.opacity(90);
+								}
+								.box-shadow(0px,10px,10px,fade(@borderContentColor, 60%));
+							}
+						}
+						
+						&[data-type=pro]:before,&[data-type=perso]:before{
+							position:absolute;
+							top:-18px;
+							left:-5px;
+							content: attr(data-type);
+							font-family:bebas_neueregular;
+							letter-spacing:0.1em;
+							color:#FFF;
+							.border-radius(3px);
+							padding:2px 5px;
+							/*
+							-webkit-box-shadow:  0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+							box-shadow:  0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+							*/
+						}
+						
+						&[data-type=pro]:before{
+							border:1px #ae6e00 solid;
+							background: #f7bf00; /* Old browsers */
+							background: -moz-linear-gradient(top,  #f7bf00 0%, #e87100 100%); /* FF3.6+ */
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7bf00), color-stop(100%,#e87100)); /* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(top,  #f7bf00 0%,#e87100 100%); /* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(top,  #f7bf00 0%,#e87100 100%); /* Opera 11.10+ */
+							background: -ms-linear-gradient(top,  #f7bf00 0%,#e87100 100%); /* IE10+ */
+							background: linear-gradient(to bottom,  #f7bf00 0%,#e87100 100%); /* W3C */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7bf00', endColorstr='#e87100',GradientType=0 ); /* IE6-9 */
+						}
+						
+						&[data-type=perso]:before{
+							border:1px #5d7b00 solid;
+							background: #adcb00; /* Old browsers */
+							background: -moz-linear-gradient(top,  #adcb00 0%, #578600 100%); /* FF3.6+ */
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#adcb00), color-stop(100%,#578600)); /* Chrome,Safari4+ */
+							background: -webkit-linear-gradient(top,  #adcb00 0%,#578600 100%); /* Chrome10+,Safari5.1+ */
+							background: -o-linear-gradient(top,  #adcb00 0%,#578600 100%); /* Opera 11.10+ */
+							background: -ms-linear-gradient(top,  #adcb00 0%,#578600 100%); /* IE10+ */
+							background: linear-gradient(to bottom,  #adcb00 0%,#578600 100%); /* W3C */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adcb00', endColorstr='#578600',GradientType=0 ); /* IE6-9 */
+						}
+						
+						&[data-type=pro]:after,&[data-type=perso]:after{
+							position: absolute;
+							content:" ";
+							top:1px;
+							left:0;
+							border: solid transparent;
+							height: 0;
+							width: 0;
+							pointer-events: none;
+							border-color: rgba(136, 183, 213, 0);
+							border-width: 4px;
+						}
+						&[data-type=pro]:after{
+							border-top-color:#cc6c00;
+						}
+						
+						&[data-type=perso]:after{
+							 border-top-color:#64820c;
+						}
+					}
+				} //fin LI
+			} //fin UL
+		}
+		
+		> nav{
+			.navArrowPortfolio;
+		}
+		
+		
+		> ul#menuSlide{
+			position:relative;
+			padding:0;
+			margin:-15px 0 0 0;
+			list-style:none;
+			text-align:center;
+			li {
+				display:inline-block;
+				padding:0 1%;
+				a{
+					display:inline-block;
+					width:8px;
+					height:8px;
+					padding:0;
+					margin:0;
+					background-color:#FFF;
+					.border-radius(50%);
+					border:2px #000 solid;
+					text-decoration:none;
+					.transition(all 0.5s ease-in-out);
+					
+					&.active{
+						background-color:#000;
+						border:2px #FFF solid;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+/********************************************/
+/** Contenu Portfolio : APERCU des projets **/
+/********************************************/
+body > div#circle > div#content > section#dt-projet{
+	position:absolute;
+	//z-index:101;
+	top:0;
+	left:0;
+	width:@widthCircle;
+	height:@heightcircle;
+	background: transparent url("@{pathImg}/backgroung-content.png") left top repeat;
+	border:1px #727272 solid;
+	.border-radius(400px);
+	
+	header{
+		h1{
+			font-family:bebas_neueregular;
+			font-size:1.8em;
+			color:#7b7b7b;
+			margin-top:25px;
+		}
+		
+		h3{
+			display:block;
+			margin:0 0 0 0;
+			padding-top:0;
+			font-size:0.8em;
+			color:#7b7b7b;
+			text-align:center;
+		}
+
+		h2{
+			font-size:1.6em;
+			padding: 2px;
+			a{
+				color:#7b7b7b;
+				font-family:doctor_soos;
+			}
+			&:before{
+				content:"\f07b";
+				font-family:fontello;
+				color:#515567;
+				font-size:1em;
+				margin-right:5px;
+			}
+		}
+
+		ul{
+			list-style:none;
+			width:370px;
+			margin:10px 0 0 130px;
+			padding:0;
+
+			li{
+				color:#7b7b7b;
+				font-size:0.9em;
+				font-weight:bold;
+				&:before{
+					content:"";
+					font-family:fontello;
+					color:#515567;
+					margin-right:5px;
+					font-size:1.4em;
+				}
+			}
+			
+			li.where{
+				display:inline-block;
+				width:49%;
+				&:before{
+					content:"\e724";
+				}
+			}
+			
+			li.date{
+				display:inline-block;
+				width:49%;
+				text-align:right;
+				&:before{
+					content: "\1f4c5";
+				}
+			}
+			
+			li.code{
+				display:block;
+				margin-top:5px;
+				text-align:center;
+				&:before{
+					content:"\e714";
+				}
+			}
+		}
+		
+		&:after{
+			content:"";
+			background:none;
+		}
+		
+	}
+	
+	figure{
+		position:relative;
+		margin:-20px 0 0 0;
+		padding:0;
+		
+		div#slideImgDProj{
+			position:relative;
+			overflow-x: hidden;
+			margin:0 13% 0 14%;
+
+			ul{
+				width: 800%;
+				clear:both;
+				list-style:none;
+				padding:0;
+				margin:0;
+			
+				li{
+					float:left;
+					width: 15%;
+					padding:0;
+					margin:0;
+
+					img{
+						border:4px #e3e3e3 solid;
+						.border-radius(10px);
+					}
+
+					div.msgImgSlide{
+						position:absolute;
+						width:96%;
+						bottom:10px;
+						padding:3px;
+						margin-left:4px;
+						font-size:0.75em;
+						color:#000;
+						text-decoration:none;
+						background-color:#EAEAEA;
+						/*margin:-20px 0 20px 0;*/
+					}
+				}
+			}
+		}
+		
+		> ul#menuImgSlide{
+			position:relative;
+			padding:0;
+			margin:0 0 0 0;
+			list-style:none;
+			text-align:center;
+
+			li {
+				display:inline-block;
+				padding:0 1%;
+				a{
+					display:inline-block;
+					width:6px;
+					height:6px;
+					padding:0;
+					margin:0;
+					background-color:#FFF;
+					.border-radius(50%);
+					border:1px #000 solid;
+					text-decoration:none;
+					.transition(all 0.5s ease-in-out);
+					
+					&.active{
+						background-color:#000;
+						border:1px #E3E3E3 solid;
+					}
+				}
+			}
+		}
+		
+		figcaption{
+			.degradContent  {
+				margin:0;
+				padding:0;
+				overflow: hidden; 
+				border:none;
+				&.left{
+					float: left; 
+					clear: left;
+					//border:1px green solid;
+				}
+				&.right{
+					float: right; 
+					clear: none;
+					//border:1px red solid;
+				}
+
+				&.bloc1{width: 70px ; height: 20px; margin-top:40px;}
+				&.bloc2{width: 85px ; height: 20px;}
+				&.bloc3{width: 105px ; height: 20px;}
+				&.bloc4{width: 125px ; height: 20px;}			
+			}
+
+			p{
+				margin-top:-5px;
+				padding:0 10%;
+				color:#7b7b7b;
+				font-size:0.9em;
+				text-align:justify;
+			}
+		}
+
+	}
+	
+	nav{
+		div#arrowSlide{
+			.navArrowPortfolio;
+			a[data-direction=left], a[data-direction=right]{ top:40%; }
+		}
+		
+		div#close{
+			a[data-type=left], a[data-type=right]{
+				position:absolute;
+				top:-11.5%;
+				width:31px;
+				height:210px;
+				text-decoration:none;
+				background: transparent url("@{pathImg}/support-details-portfolio.png") left top repeat;
+
+				&:after{
+					position:absolute;
+					content:"\2715";
+					top:40%;
+					left:30%;
+					width:27px;
+					height:27px;
+
+					font-family:fontello;
+					font-size:1.4em;
+					color:#FFF;
+					text-align:center;
+					line-height:25px;
+					
+					background: #3e0803; /* Old browsers */
+					background: -moz-linear-gradient(top, #3e0803 0%, #61150c 100%); /* FF3.6+ */
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e0803), color-stop(100%,#61150c)); /* Chrome,Safari4+ */
+					background: -webkit-linear-gradient(top, #3e0803 0%,#61150c 100%); /* Chrome10+,Safari5.1+ */
+					background: -o-linear-gradient(top, #3e0803 0%,#61150c 100%); /* Opera 11.10+ */
+					background: -ms-linear-gradient(top, #3e0803 0%,#61150c 100%); /* IE10+ */
+					background: linear-gradient(to bottom, #3e0803 0%,#61150c 100%); /* W3C */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e0803', endColorstr='#61150c',GradientType=0 ); /* IE6-9 */
+					
+					border:1px #000 solid;
+					.border-radius(5px);
+				}
+				
+				&:hover:after{
+				}					
+				
+			}
+			
+			a[data-type=left]{
+				left:10%;
+			}
+			
+			a[data-type=right]{
+				right:10%;
+				/* flip */
+				.transform(scaleX(-1));
+				filter: FlipH;
+				-ms-filter: "FlipH";
+			}
+			
+		}
+	}
+
+	//si c'est un apercu direct, on fait une animation
+	&.liveView{
+		.animation(slideDown 1s ease);
+
+		&.closeDp{
+			&.left{
+				.animation(coupezLeFilLeft 1.5s ease);
+			}	
+			&.right{
+				.animation(coupezLeFilRight 1.5s ease);
+			}	
+		}		
+	}
+
+}
+	
+/********************************************/
+/************  Contenu Portfolio ************/
+/** Fleche de navigation pour le portfolio **/
+/********************************************/
+.navArrowPortfolio{
+	a[data-direction=left], a[data-direction=right]{
+		position:absolute;
+		top:47%;
+		display:inline-block;
+		width:40px;
+		height:28px;
+		background-color:#7d7d7c;
+		text-decoration:none;
+		.border-radius(4px);
+		font-family:fontello;
+		color:#FFF;
+		text-align:center;
+		line-height:2.4em;
+	}
+	a[data-direction=left]{
+		.transform(rotate(180deg));
+		left:40px;
+		line-height:25px;
+		&:hover{
+			text-align:right;
+		}
+	}
+	
+	a[data-direction=right]{
+		right:40px;
+		&:hover{
+			text-align:right;
+		}
+	}
+	
+	a[data-direction=left]:before{
+		content:"\2192";
+	}
+	
+	a[data-direction=right]:before{
+		content:"\2192";
+	}
+}
+
+
+
+/********************************************/
+/************  Contenu Portfolio ************/
+/******* Zoom des images du slider **********/
+/********************************************/
+body > div#circle > div#content > section#dt-projet{
+	.lb-overlay{
+		z-index: 300;
+		position: fixed;
+		overflow: hidden;
+		width: 0px;
+		height: 0px;
+		left: 0px;
+		top: 0px;
+		padding: 0px;
+		text-align: center;
+		
+		background: rgb(241,210,194);
+		background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
+		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+		background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+		background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+		background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
+
+		cursor:pointer;
+		
+		a{
+			z-index: 301;
+			position: absolute;
+			font-size: 15px;
+			text-align: center;
+			width: 50px;
+			height: 50px;
+			line-height:40px;
+			color: #fff;
+			background-color:#000;
+			font-weight:bold;
+			text-decoration:none;
+			.border-radius(50%);
+
+			&.lb-close{
+				top: 45px;
+				left: 48%;
+			}
+
+			&.lb-left{
+				display:none;
+				z-index: 303;
+				left:12%;
+				top: 48%;
+				.transform(rotate(180deg));
+			}
+			
+			&.lb-right{
+				display:none;
+				z-index: 303;
+				right:12%;
+				top: 48%;
+			}
+
+			&.lb-right:before, &.lb-left:before{
+				display:inline-block;
+				content:"\2192";
+				width:100%;
+				font-family:fontello;
+				color:#FFF;
+				text-align:center;
+				line-height:2.4em;
+				margin-top: 8px;
+			}
+
+			&:hover{
+				.box-shadow(0px,0px,10px,fade(#000, 60%));
+			}
+			
+		}
+		
+		img{
+			/* height: 100%; For Opera max-height does not seem to work */
+			position: relative;
+			z-index: 302;
+			max-height: 100%;
+			.box-shadow(1px,1px,4px,rgba(0,0,0,0.3));
+			cursor:default;
+		}
+		
+		div{
+			position: relative;
+			margin: 10px auto 0px auto;
+			.text-shadow(0px,1px,1px,rgba(255,255,255,0.6));
+			color:#1b3651;
+			cursor:default;
+
+		}
+			
+		&:target {
+			width: auto;
+			height: auto;
+			bottom: 0px;
+			right: 0px;
+			padding: 80px 100px 120px 100px;
+			
+			img,
+			a, 
+			> div{
+				.animation(fadeInScale 0.5s ease-in-out);
+			}
+			
+			a,
+			> div{
+				.opacity(100);
+			}
+		}
+
+	}
+}

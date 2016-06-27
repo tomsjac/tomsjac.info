@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/**
+ * Fichier d'amorce pour la mise en page du portfolio
+ *
+ * @author   Thomas
+ * @version  1.1.0
+ */
+
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+/* PATH */
+@pathImg 					   : 'imgCss';
+@pathFont 					   : 'fontCss';
+
+/* COLOR CONFIG */
+@backgroundGlobalColor 		: #9ab683;
+@borderContentColor			: #E5D664; //E5D664
+@borderLoadContentColor    : #BAB9B0;
+@borderLoadContentShadow   : #FA925F;
+
+/* Dimension */
+@widthCircle 				   : 630px;
+@heightcircle 				   : 630px;
+
+/* Mesure */
+@marginTopContent			   : 60px;
+
+
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+.font-face('bebas_neueregular',"@{pathFont}/bebasneue-webfont");
+.font-face('doctor_soos', "@{pathFont}/doctor_soos-webfont");
+ 
+
+/* ==========================================================================
+   Global structure
+   ========================================================================== */
+html{
+	height:100%;
+}   
+ 
+body{
+	width:100%;
+	background: @backgroundGlobalColor url("@{pathImg}/background.jpg") top center no-repeat;
+	
+	color: #000;
+	font-size:12px;
+	font-weight:normal;
+	font-family:Verdana;
+	overflow:hidden;
+}
+
+.flagRepoGithub{
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    border: 0;
+}
+
+/* ==========================================================================
+   IMPORT LESS DES PARTIES GENE
+   ========================================================================== */
+ @import "assets/_menu.less";
+ @import "assets/_content.less";
+ @import "assets/_loadingContent.less";
+ @import "assets/_cloud.less"; 
+ @import "assets/_footer.less";  
+ 
+ 
+/* ==========================================================================
+   IMPORT LESS DES PARTIES
+   ========================================================================== */
+ @import "controller/_acceuil.less";
+ @import "controller/_apropos.less";
+ @import "controller/_profil.less";
+ @import "controller/_portfolio.less"; 
+ @import "controller/_contact.less"; 
+ @import "controller/_404.less"; 
+ 
+ 
+/* ==========================================================================
+   IMPORT LESS MEDIA QUERY GENE
+   ========================================================================== */
+ @import "assets/_mediaQueries.less";  
+ @import "assets/_print.less";  
+ 
+ @import "controller/responsive/_acceuil.less";
+ @import "controller/responsive/_apropos.less";
+ @import "controller/responsive/_profil.less";
+ @import "controller/responsive/_portfolio.less"; 
+ @import "controller/responsive/_contact.less"; 
+ @import "controller/responsive/_404.less"; 
+
+/* ==========================================================================
+   IMPORT VENDOR
+   ========================================================================== */
+@import "vendor/_animations-fonctions.less";
+@import "vendor/_fontello.less"; /* Font icon */

@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/**
+ *  Contenu  de la page A propos
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+body > div#circle > div#content > section#content-apropos{
+	
+	header div{
+		margin-top:20px;
+		color:#777777;
+		font-size:0.8em;
+		text-align:center;
+		
+		a{
+			text-decoration:none;
+			img{
+				vertical-align:middle;
+				margin:0 5px;
+			}
+		}
+	}
+	
+	article{
+		font-size: 1.1em;
+		line-height:1.4em;
+		
+		ul{
+			list-style:none;
+			li{
+				height:26px;
+				padding-left:35px;
+				margin:5px 0px;
+				line-height:25px;
+				&#pRealisation{
+					background: transparent url("@{pathImg}/icon1-aPropos.png") left top no-repeat;
+				}
+				
+				&#pIntegration{
+					background: transparent url("@{pathImg}/icon2-aPropos.png") left top no-repeat;
+				}
+				
+				&#pProgrammation{
+					background: transparent url("@{pathImg}/icon3-aPropos.png") left top no-repeat;
+				}
+				
+				&#pReferencement{
+					background: transparent url("@{pathImg}/icon4-aPropos.png") left top no-repeat;
+				}
+				
+				&#pClient{
+					background: transparent url("@{pathImg}/icon5-aPropos.png") left top no-repeat;
+				}
+			}
+		}
+		
+		a.pdf{
+			display:inline-block;
+			margin:40px 0 0 22%;
+			font-family:doctor_soos;
+			font-size:1.3em;
+			&:before{
+				color:#8B0100;
+				vertical-align:middle;
+				text-decoration:none;
+				font-size:1.5em;
+			}
+		}
+	}
+	
+}

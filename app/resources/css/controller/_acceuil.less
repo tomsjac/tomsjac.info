@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/**
+ *  Contenu  de la page d'Acceuil
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+body > div#circle > div#content > section#content-accueil{
+	
+	margin-top:150px;
+	padding:0px 67px 0px 67px;
+	text-align:center;
+	
+	
+	h1{
+		font-family:bebas_neueregular;
+		font-size:4em;
+		letter-spacing:0.1em;
+		.text-shadow(2px,2px,0px,#d7d7d7);
+	}
+	
+	h2{
+		font-family:bebas_neueregular;
+		font-size:2.5em;
+		letter-spacing:0.1em;
+		color:#7b7b7b;
+	}
+	
+	hr{
+		width:120px;
+		border:none;
+		border-top:1px #000 solid;
+	}
+	
+	p{
+		font-family:doctor_soos;
+		font-size:2em;
+		color:#373636;
+		line-height:1.2em;
+	}
+	
+	&:before, &:after{
+		display:block;
+		font-family:fontello;
+		font-size:1em;
+		letter-spacing:0.5em;
+		content:"\2605 \2605 \2605 \2605 \2605 \2605";
+	}
+}
+
+body > div#circle > div#content > section.pdf{
+	display: none;
+	visibility: hidden;
+}
+

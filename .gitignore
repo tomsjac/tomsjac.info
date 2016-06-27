@@ -1,0 +1,12 @@
+# User specific & automatically generated files #
+#################################################
+composer.lock
+/storage/*
+/vendor/*
+/app/resources/packages/node_modules/*
+/data/json/contact.json
+
+# OS generated files #
+######################
+.DS_Store
+Thumbs.db

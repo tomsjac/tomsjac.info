@@ -1,0 +1,76 @@
+{
+	//**********************************//
+	//*********** Général***************//
+	//**********************************//
+    "global":
+    {
+		"title"				: "Portfolio de Thomas Jacquey - Lead développeur PHP",
+		"description"       : "Spécialisé : Extranet / Intranet / Application spécifique | Réflexion, Développement, Intégration de vos projets Web",
+		"author"			: "Tomsjac", 				
+		"geo"               : {"placename" : "Rosheim", "region" : "FR-67"},
+        "og"                : {
+                                "locale" : "fr_FR", 
+                                "type" : "website", 
+                                "image": "/img/icon/favicon-196x196.png",
+                                "site_name": "Tomsjac",
+                                "title": "Portfolio de Thomas Jacquey - Lead développeur PHP",
+                                "description": "Spécialisé : Extranet / Intranet / Application spécifique"
+                              },
+
+        "twitter"           : {
+                                "card" : "summary", 
+                                "site" : "@tomsjac", 
+                                "image": "/img/icon/favicon-196x196.png",
+                                "site_name": "Tomsjac",
+                                "title": "Portfolio de Thomas Jacquey - Lead développeur PHP",
+                                "description": "Spécialisé : Extranet / Intranet / Application spécifique"
+                               }
+	},
+	
+	//**********************************//
+	//*********** Apropos **********//
+	//**********************************//
+    "apropos":
+    {
+		"title"				: "Commençons par les présentations",
+		"description"       : "Préambule sur mes compétences, méthodologie de travail - A propos"
+	},
+    
+	//**********************************//
+	//*********** Profil **********//
+	//**********************************//
+    "profil":
+    {
+        "lead"   :      {
+                            "title" : "Mon profil en gestion de projet", 
+                            "description" : "Méthodologie et organisation pour la réalisation de projet client - Profil : Gestion de projet"
+                        },
+                       
+        "dev"    :      {
+                            "title" : "Mon profil en développement back-end", 
+                            "description" : "Méthodologie et langage de programmation pour réaliser les demandes clients  - Profil : Développement" 
+                        },
+        "front"  :      {
+                            "title" : "Mon profil en développement front-end", 
+                            "description" : "Méthodologie et langage utilisé pour les interfaces utilisateurs  - Profil : Front-Dev"
+                        }
+	},
+    
+    //**********************************//
+	//*********** Portfolio **********//
+	//**********************************//
+    "portfolio":
+    {
+		"title"				: "Mes projets et réalisations les plus exhaustives",
+		"description"       : "Liste exhaustive de projets professionnels et personnels réalisés avec amour - Portfolio"
+	},
+    
+    //**********************************//
+	//*********** Contact **********//
+	//**********************************//
+    "contact":
+    {
+		"title"				: "N'hésistez pas à me contacter",
+		"description"       : "Un petit Message ca fait toujours plaisir - Contact"
+	}    
+}

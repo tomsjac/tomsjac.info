@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/**
+ * Gestion des Media Queries
+ *
+ * @author   Thomas
+ * @version  1.1.0
+ */
+
+#versionMobile{
+	display: none;
+	visibility: hidden;
+}
+
+
+/* ================= Mobile (Portrait) < 767px ================= */
+@media only screen and (max-width: 767px) {
+	.mediaScreenMobile(); 
+}
+
+
+/* ================= Mobile (Portrait) < 320px ================= */
+@media only screen and (max-width: 320px) {
+	.mediaScreenMobile(); 
+	.mediaScreenMobile320();
+}
+
+
+/* ================= Tablet (Portrait) 768px - 959px ================= */
+@media only screen and (min-width: 768px) and (max-width: 965px) {
+	.mediaScreenTablet(); 
+}
+
+
+/* ================= Ecran HD ================= */
+@media screen and (min-width : 1824px) , screen and (min-height: 1080px) {
+	.mediaScreenHD();
+}
+
+
+/********************** FIX ***********************/
+/* ================= Ecran 1024 ================= */
+@media only screen and (min-width : 966px) and (max-width : 1024px) {
+	body > header nav ul li{
+		margin:0 50px;
+	}
+
+}
+
+//si l'écran est plus grand que 1824px, on rapproche un peu le menu
+@media only screen and (min-width : 1824px) {
+	body > header{
+		max-width: 70%;
+	}
+	
+	aside.cloud ul{
+		margin: 0 -8% 0 -8%;
+	}
+}
+
+
+/* ================= Style Mobile < 320 ================= */
+.mediaScreenMobile320(){
+    
+}
+
+/* ================= Style Mobile Gene ================= */
+.mediaScreenMobile(){
+	 @import "responsive/_mediaScreenMobile.less";
+}
+
+/* ================= Style Tablette Gene ================= */
+.mediaScreenTablet(){
+	body > header nav ul li{
+		top:-100px;
+		margin:0 50px;
+	}
+		
+	aside#cloud ul{
+		display:none;
+	}
+	
+	aside#cloud #gregre{
+		display:block;
+		top:600px !important;
+		left:80% !important;
+	}
+}
+
+
+/* ================= Style HD Gene ================= */
+.mediaScreenHD(){
+	//Si plus haut ou plus large que le background HD, on lisse le fond d'écran
+ 	body{
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+}

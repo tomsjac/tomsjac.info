@@ -1,0 +1,421 @@
+{
+	//**********************************//
+	//*********** KATEJI ***************//
+	//**********************************//
+    "kateji":
+    {
+		"nom"				: "KATEJI",
+		"slogan"			: "C'est tellement simple de mieux coder",
+		"type"				: "pro", 					// perso / pro 
+		"categorie"         : "FrameWork", 				// Extranet / FrameWork / CMS / Site Web / Personnel
+		"imgMiniature"		: "/data/images/webcd/kateji/apercu.jpg",
+		"localisation"		: "Webcd - Obernai", 		// Maison / boulot
+		"dateRealisation" 	: "2013-2014",
+		"languageOutils"	: "PHP5 - SQL / MCV - POO / Smarty",
+		"description"		: "Réflexion et développement d'un framework interne pour simplifier et améliorer la conception des sites internet et extranets. Kateji repose sur une structure MVC modulaire, pouvant être étendu pour personnaliser et/ou améliorer un module selon les souhaits du client. On retrouve toutes les fonctionnalités importantes : ORM, Routeur, Helpers, Templating, Caching, Gestion des ressources externes ...",
+								
+		"urlSite"			: [{"intitule" : "www.kateji.com", "link" : "#"}],
+		"imgSlide" 			: [
+								{
+									"img" 		  : "/data/images/webcd/kateji/slide1.jpg", 
+									"imgZoom" 	  : "/data/images/webcd/kateji/zoom1.jpg", 
+									"details" 	  : "Arboresence et structure du FrameWork KTJ"
+								},
+								{
+									"img" 		  : "/data/images/webcd/kateji/slide2.jpg", 
+									"imgZoom" 	  : "/data/images/webcd/kateji/zoom2.jpg", 
+									"details" 	  : "Fonctionnalités & services disponibles"
+								},
+								{
+									"img" 		  : "/data/images/webcd/kateji/slide3.jpg", 
+									"imgZoom" 	  : "/data/images/webcd/kateji/zoom3.jpg", 
+									"details" 	  : "Exemple d'écriture d'un controller"
+								},
+								{
+									"img" 		  : "/data/images/webcd/kateji/slide4.jpg", 
+									"imgZoom" 	  : "/data/images/webcd/kateji/zoom4.jpg", 
+									"details" 	  : "KATEJI extranet : Page d'authentification"
+								},
+								{
+									"img" 		  : "/data/images/webcd/kateji/slide5.jpg", 
+									"imgZoom" 	  : "/data/images/webcd/kateji/zoom5.jpg", 
+									"details" 	  : "KATEJI extranet : Interface & gestion des utilisateurs"
+								}
+							]
+	},
+	
+	//**********************************//
+	//*********** Blog à deux **********//
+	//**********************************//
+    "ba2":
+    {
+		"nom"				: "Blog à deux",
+		"slogan"			: "Faites plus que de créer un blog, offrez le !",
+		"type"				: "perso",
+		"categorie"         : "Site Web / Blog", 
+		"imgMiniature"		: "/data/images/perso/blog-a-deux/apercu.jpg",
+		"localisation"		: "Rosheim",
+		"dateRealisation" 	: "Janv.2010 - Juil.2013",
+		"languageOutils"	: "PHP5 - Sql / HTML - CSS / JS",
+		"description"		: "Création d'une plateforme de blog, ou l'on vit l'expérience de blogueur à deux. Vous pouvez échanger ensemble sur un blog public qui est vu et lu par tous, et/ou communiquer en toute discrétion via une partie privée ou chacun peut écrire sur le blog de l'autre.",
+		"urlSite"			: [{"intitule" : "Projet abandonné", "link" : "#"}],
+		"imgSlide" 			: [
+								{
+									"img" 		  : "/data/images/perso/blog-a-deux/slide1.jpg", 
+									"imgZoom" 	  : "/data/images/perso/blog-a-deux/zoom1.jpg", 
+									"details" 	  : "Page d'accueil du site"
+								},
+								{
+									"img" 		  : "/data/images/perso/blog-a-deux/slide2.jpg", 
+									"imgZoom" 	  : "/data/images/perso/blog-a-deux/zoom2.jpg", 
+									"details" 	  : "Mode connecté : gestion de son blog public"
+								},
+								{
+									"img" 		  : "/data/images/perso/blog-a-deux/slide3.jpg", 
+									"imgZoom" 	  : "/data/images/perso/blog-a-deux/zoom3.jpg", 
+									"details" 	  : "Mode connecté : édition d'un billet"
+								},
+								{
+									"img" 		  : "/data/images/perso/blog-a-deux/slide4.jpg", 
+									"imgZoom" 	  : "/data/images/perso/blog-a-deux/zoom4.jpg", 
+									"details" 	  : "Interface admin : gestion de la bibliothèque d'images"
+								},
+								{
+									"img" 		  : "/data/images/perso/blog-a-deux/slide5.jpg", 
+									"imgZoom" 	  : "/data/images/perso/blog-a-deux/zoom5.jpg", 
+									"details" 	  : "Interface admin :  gestion de son compte"
+								},
+								{
+									"img" 		  : "/data/images/perso/blog-a-deux/slide6.jpg", 
+									"imgZoom" 	  : "/data/images/perso/blog-a-deux/zoom6.jpg", 
+									"details" 	  : "Interface admin : sélection d'un thème d'un blog"
+								}
+
+							]
+	},
+
+	//**********************************//
+	//*********** Sereliance ***********//
+	//**********************************//
+    "sereliance":
+    {
+		"nom"				: "Groupe Séréliance",
+		"slogan"			: "Extranet de gestion et d'animation commercial",
+		"type"				: "pro",
+		"categorie"         : "Extranet",
+		"imgMiniature"		: "/data/images/webcd/sereliance/apercu.jpg",
+		"localisation"		: "Webcd - Obernai", 
+		"dateRealisation" 	: "Janv.2013 - Mars.2014",
+		"languageOutils"	: "PHP5 - Sql / HTML - CSS / JS (UIkit)",
+		"description"		: "Extranet dédié à la gestion commercial de l'entreprise Séréliance spécialisé dans la vente / installation d’énergie renouvelable. L'outil permet de gérer plusieurs aspects comme la prospection via le call-center, la prise de rendez-vous pour une démo / diagnostique chez un prospect, la gestion des dossiers signés, le suivi et la prospection via la WebApp ...",
+		"urlSite"			: [{"intitule" : "www.blueleader.fr", "link" : "http://www.blueleader.fr"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/webcd/sereliance/slide1.jpg", 
+									"imgZoom" 		: "/data/images/webcd/sereliance/zoom1.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "GRC : Fiche client"
+								},
+								{
+									"img" 			: "/data/images/webcd/sereliance/slide2.jpg", 
+									"imgZoom" 		: "/data/images/webcd/sereliance/zoom2.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Pipe : Workflow d'un commercial"
+								},
+								{
+									"img" 			: "/data/images/webcd/sereliance/slide3.jpg", 
+									"imgZoom" 		: "/data/images/webcd/sereliance/zoom3.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Statistiques : Indice de performance de l'entreprise ou d'un commercial"
+								},
+								{
+									"img" 			: "/data/images/webcd/sereliance/slide4.jpg", 
+									"imgZoom" 		: "/data/images/webcd/sereliance/zoom4.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Agenda : Gestion des rendez-vous client ou professionnel"
+								},
+								{
+									"img" 			: "/data/images/webcd/sereliance/slide5.jpg", 
+									"imgZoom" 		: "/data/images/webcd/sereliance/zoom5.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "WebApp : Page d'authentification à l'application mobile web"
+								},
+								{
+									"img" 			: "/data/images/webcd/sereliance/slide6.jpg", 
+									"imgZoom" 		: "/data/images/webcd/sereliance/zoom6.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "WebApp : Consultation des rendez-vous commerciaux via le mobile"
+								}
+							]
+	},
+
+	//**********************************//
+	//*********** NewsActus ************//
+	//**********************************//
+    "newsActus":
+    {
+		"nom"				: "NewsActus",
+		"slogan"			: "Le meilleur de l'actualité en temps réel",
+		"type"				: "perso",
+		"categorie"         : "Réseaux sociaux", 
+		"imgMiniature"		: "/data/images/perso/newsactus/apercu.jpg",
+		"localisation"		: "Rosheim",
+		"dateRealisation" 	: "Depuis Déc.2011",
+		"languageOutils"	: "PHP5 - SQL / Api Twitter, Facebook",
+		"description"		: "Système d'actualités en temps réel basés sur les flux RSS et Twitter. Les comptes axés sur divers thèmes sont alimentés par les fils d'actus des meilleurs sites. Les followers sont redirigés vers les articles de ses sites en transitant via une page tampon de pub. La promotion de ses comptes est réalisée via une application maison qui suit automatiquement les followers qui seraient intéressés par ses news.",
+		"urlSite"			: [{"intitule" : "Projet vendu", "link" : "#"}],
+		"imgSlide" 			: [
+								{
+									"img" 		: "/data/images/perso/newsactus/slide1.jpg", 
+									"imgZoom" 	: "/data/images/perso/newsactus/zoom1.jpg", 
+									"details" 	: "Page d'accueil de newsActus"
+								},
+								{
+									"img" 		: "/data/images/perso/newsactus/slide2.jpg", 
+									"imgZoom" 	: "/data/images/perso/newsactus/zoom2.jpg", 
+									"details" 	: "Page de redirection depuis twitter vers l'article source"
+								},
+								{
+									"img" 		: "/data/images/perso/newsactus/slide3.jpg", 
+									"imgZoom" 	: "/data/images/perso/newsactus/zoom3.jpg", 
+									"details" 	: "Twitter Tools : l'outil automatisé de recherche de followers"
+								},
+								{
+									"img" 		: "/data/images/perso/newsactus/slide4.jpg", 
+									"imgZoom" 	: "/data/images/perso/newsactus/zoom4.jpg", 
+									"details" 	: "Twitter Tools : gestion d'un compte"
+								},
+								{
+									"img" 		: "/data/images/perso/newsactus/slide5.jpg", 
+									"imgZoom" 	: "/data/images/perso/newsactus/zoom5.jpg", 
+									"details" 	: "Twitter Tools : automatisation des tweets et retweets entre compte"
+								},
+								{
+									"img" 		: "/data/images/perso/newsactus/slide6.jpg", 
+									"imgZoom" 	: "/data/images/perso/newsactus/zoom6.jpg", 
+									"details" 	: "Twitter Tools : suivi des stats d'un compte twitter"
+								}
+							]
+	},
+	
+	//**********************************//
+	//*********** Veripro Extranet *****//
+	//**********************************//
+    "veripro":
+    {
+		"nom"				: "Veripro",
+		"slogan"			: "Cotation des entreprises du Bâtiment",
+		"type"				: "pro",
+		"categorie"         : "Extranet", 
+		"imgMiniature"		: "/data/images/webcd/veripro/apercu.jpg",
+		"localisation"		: "WebCd - Obernai",
+		"dateRealisation" 	: "2010 - 2011",
+		"languageOutils"	: "PHP, SQL",
+		"description"		: "Extranet dédié à la création de cotation pour les entreprises du bâtiment. L'instructeur récolte toutes les informations importantes et sensibles sur les entreprises à coter (documents comptables, assurances ...). Et une fois le dossier rempli, l’outil génère un rapport de cotation permettant de savoir si l'entreprise est fiable ou pas.",
+		"urlSite"			: [{"intitule" : "www.veripro.fr", "link" : "http://www.veripro.fr/"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/webcd/veripro/slide1.jpg", 
+									"imgZoom" 		: "/data/images/webcd/veripro/zoom1.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "GRC : Gestion des entreprises"
+								},
+								{
+									"img" 			: "/data/images/webcd/veripro/slide2.jpg", 
+									"imgZoom" 		: "/data/images/webcd/veripro/zoom2.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Dossier : Instruction d'un dossier de cotation"
+								},
+								{
+									"img" 			: "/data/images/webcd/veripro/slide3.jpg", 
+									"imgZoom" 		: "/data/images/webcd/veripro/zoom3.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Dossier : Gestion des documents utiles à l'instruction du dossier"
+								},
+								{
+									"img" 			: "/data/images/webcd/veripro/slide4.jpg", 
+									"imgZoom" 		: "/data/images/webcd/veripro/zoom4.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Assureur : Gestion d'une fiche assureur"
+								}
+							]
+	},
+	
+	//**********************************//
+	//*********** Winbizz  *************//
+	//**********************************//
+    "winbizz":
+    {
+		"nom"				: "Winbizz",
+		"slogan"			: "CRM de vente d'espace publicitaire",
+		"type"				: "pro",
+		"categorie"         : "Extranet",
+		"imgMiniature"		: "/data/images/webcd/winbizz/apercu.jpg",
+		"localisation"		: "WebCd - Obernai",
+		"dateRealisation" 	: "2007 - Maintenant",
+		"languageOutils"	: "PHP, Sql, MsSql / HTML, Css, Js",
+		"description"		: "Extranet dédié à la vente et au suivi commercial de spot audio publicitaire sur les ondes radios. L'outil a été développé en partenariat avec l'entreprise Winmedia et interfacé avec leur logiciel de gestion des radios. Chaque client utilise le même code source avec une base de données indépendante. La partie Booking est le noyau centrale de l'extranet  permettant la planification et la vente de spot publicitaire audio.",
+		"urlSite"			: [{"intitule" : "www.winmedia.org", "link" : "http://www.winmedia.org/index.php/fr/winbizz.html"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/webcd/winbizz/slide1.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winbizz/zoom1.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de démo. Toutes les données sont factices",
+									"details" 		: "GRC : Gestion et suivi des annonceurs"
+								},
+								{
+									"img" 			: "/data/images/webcd/winbizz/slide2.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winbizz/zoom2.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de démo. Toutes les données sont factices",
+									"details" 		: "Booking : Plannification des spots sur la grille de diffusion"
+								},
+								{
+									"img" 			: "/data/images/webcd/winbizz/slide3.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winbizz/zoom3.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de démo. Toutes les données sont factices",
+									"details" 		: "Booking : Récapitulatif de la commande"
+								},
+								{
+									"img" 			: "/data/images/webcd/winbizz/slide4.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winbizz/zoom4.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de démo. Toutes les données sont factices",
+									"details" 		: "Admin Booking : Réglages des grilles tarifaires"
+								},
+								{
+									"img" 			: "/data/images/webcd/winbizz/slide5.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winbizz/zoom5.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de démo. Toutes les données sont factices",
+									"details" 		: "Studio : Production du spot audio via le studio"
+								}
+							]
+	},
+	
+	
+	
+	//**********************************//
+	//*********** Winnews  *************//
+	//**********************************//
+    "winnews":
+    {
+		"nom"				: "Winnews",
+		"slogan"			: "L'édition de contenus radiophoniques",
+		"type"				: "pro",
+		"categorie"         : "Extranet",
+		"imgMiniature"		: "/data/images/webcd/winnews/apercu.jpg",
+		"localisation"		: "Webcd - Obernai",
+		"dateRealisation" 	: "2011 - 2013",
+		"languageOutils"	: "PHP, Sql / APi Twitter, Flux XML",
+		"description"		: "Intranet dédié aux équipes journalistiques des médias, permettant le suivi et la gestion des flux d’information, la création et le tri des dépêches, jusqu’à la rédaction de brèves constituant les éditions (flash infos, Météo) programmés sur les antennes radios.",
+		"urlSite"			: [{"intitule" : "www.a2prl.fr", "link" : "http://www.a2prl.fr/"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/webcd/winnews/slide1.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winnews/zoom1.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de Dev. Toutes les données sont factices",
+									"details" 		: "Brèves : Flux d'actualités et écriture des brèves"
+								},
+								{
+									"img" 			: "/data/images/webcd/winnews/slide2.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winnews/zoom2.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de Dev. Toutes les données sont factices",
+									"details" 		: "Brèves : Edition d'une nouvelle brève"
+								},
+								{
+									"img" 			: "/data/images/webcd/winnews/slide3.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winnews/zoom3.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de Dev. Toutes les données sont factices",
+									"details" 		: "Edition : Création du contenu pour les éditions de chaque radio (le journal de 20h)"
+								},
+								{
+									"img" 			: "/data/images/webcd/winnews/slide4.jpg", 
+									"imgZoom" 		: "/data/images/webcd/winnews/zoom4.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de Dev. Toutes les données sont factices",
+									"details" 		: "Studio : Vue studio pour enregistrer vocalement l'édition papier"
+								}
+							]
+	},
+	
+	//**********************************//
+	//*********** E-modif  *************//
+	//**********************************//
+    "eModif":
+    {
+		"nom"				: "E-modif",
+		"slogan"			: "Le CMS simple d'utilisation",
+		"type"				: "pro",
+		"categorie"         : "CMS",
+		"imgMiniature"		: "/data/images/e-maginair/e-modif/apercu.jpg",
+		"localisation"		: "E-maignair - Montbéliard",
+		"dateRealisation" 	: "2003 - 2006",
+		"languageOutils"	: "PHP - SQL",
+		"description"		: "Réflexion et développement d'un CMS back end, permettant de gérer le contenu d'un site web par le client ou par l'agence. Depuis le site web, on se connecte à l'interface E-modif qui va récupérer la configuration et la Base de données de celui-ci, permettant ainsi de centraliser le code source du CMS à un seul endroit pour plusieurs sites. A partir de là, nous pouvons créer/modifier l'arborescence et gérer le contenu de celle-ci via des articles.",
+		"urlSite"			: [{"intitule" : "www.e-modif.com", "link" : "http://www.e-modif.com/"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/e-maginair/e-modif/slide1.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/e-modif/zoom1.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent du site de Démo. Toutes les données sont factices",
+									"details" 		: "Accueil : Page d'accueil d'administration de son site"
+								},
+								{
+									"img" 			: "/data/images/e-maginair/e-modif/slide2.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/e-modif/zoom2.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent du site de Démo. Toutes les données sont factices",
+									"details" 		: "Gestion du contenu : Listing de pages et articles présent sur le site"
+								},
+								{
+									"img" 			: "/data/images/e-maginair/e-modif/slide3.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/e-modif/zoom3.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent du site de Démo. Toutes les données sont factices",
+									"details" 		: "Gestion du contenu : Edition d'un article d'une page"
+								},
+								{
+									"img" 			: "/data/images/e-maginair/e-modif/slide4.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/e-modif/zoom4.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent du site de Démo. Toutes les données sont factices",
+									"details" 		: "Newsletters : Création et envoi de news aux abonnés du site"
+								},
+								{
+									"img" 			: "/data/images/e-maginair/e-modif/slide5.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/e-modif/zoom5.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent du site de Démo. Toutes les données sont factices",
+									"details" 		: "Statistiques : Suivi des performances du site internet"
+								},
+								{
+									"img" 			: "/data/images/e-maginair/e-modif/slide6.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/e-modif/zoom6.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent du site de Démo. Toutes les données sont factices",
+									"details" 		: "Contenu du site web géré par e-modif"
+								}
+							]
+	},
+	
+	//**********************************//
+	//*********** Ce Peugeot ***********//
+	//**********************************//
+    "cePeugeot":
+    {
+		"nom"				: "CE Peugeot",
+		"slogan"			: "Comité d'entreprise Peugeot Belfort-Montbéliard",
+		"type"				: "pro",
+		"categorie"         : "Site Web",
+		"imgMiniature"		: "/data/images/e-maginair/ce-peugeot/apercu.jpg",
+		"localisation"		: "E-maginair - Montbéliard",
+		"dateRealisation" 	: "2004",
+		"languageOutils"	: "PHP - SQL",
+		"description"		: "Création du site pour le comité d'entreprise de Peugeot Belfort-Montbéliard. Connecté au Cms E-modif.",
+		"urlSite"			: [{"intitule" : "www.cepsa-sochaux.com", "link" : "http://www.cepsa-sochaux.com/"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/e-maginair/ce-peugeot/slide1.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/ce-peugeot/zoom1.jpg", 
+									"details" 		: ""
+								},
+								{
+									"img" 			: "/data/images/e-maginair/ce-peugeot/slide2.jpg", 
+									"imgZoom" 		: "/data/images/e-maginair/ce-peugeot/zoom2.jpg", 
+									"details" 		: ""
+								}
+							]
+	}
+}

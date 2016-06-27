@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/**
+ * Mise en page du contenu principal (le beau soleil)
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+footer{
+	width:100%;
+	margin-top:5%;
+	color: #FFF;
+	text-align:center;
+	overflow: hidden;
+
+	.madeIn{
+		display: inline-block;
+		.heart {
+			position: relative;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			.animation(throb 4.33s ease-in-out 0s normal none infinite);
+			path {
+				fill: #FF005D;
+			}
+		}	
+	}
+
+	/*** Zone de travaux ***/
+	.zoneTravaux{
+		position:absolute;
+		left:calc(100% - 51px);
+		z-index:100;
+		width:50px;
+		cursor: pointer;
+
+		.listRestAfaire{
+			position: absolute;
+			visibility: hidden;
+    		.opacity(0);
+    		z-index:101;
+    		width:300px;
+    		top:-150px;
+   			left: -115px;
+   			.transition(0.3s ease-out);
+
+    		padding: 0px;
+    		list-style: none;
+    		background: #f5f5f5;
+   			border-radius: 3px;
+    		box-shadow: 3px 5px 10px rgba(0,0,0,0.3);
+    		
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				left: 45%;
+				width: 0;
+				height: 0;
+				border-top: 5px solid #f5f5f5;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+			}
+
+			& > li{
+				margin: 0;
+				padding: 5px 10px;
+				color : #000;
+				text-align:left;
+				font-size:0.8em;
+				
+				&.titleT{
+					font-weight: bold;
+				}
+			}
+
+		}
+
+		&:hover ul.listRestAfaire{
+			visibility: visible;
+	   	  	.opacity(100);
+    		top:-115px;
+			.transition(0.8s ease-out);
+		}
+			
+	}
+
+
+}

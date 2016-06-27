@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /storage/
+Sitemap: http://tomsjac.info/sitemap.xml

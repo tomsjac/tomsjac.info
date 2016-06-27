@@ -1,0 +1,12 @@
+{
+	"name": "tomsjac.info",
+	"version": "1.0.0",
+	"description": "Package Assets - WebSite Tomsjac",
+    "type": "project",
+	"dependencies": {
+		"mustache"								: "~2.2.1",
+        "requirejs"                             : "~2.2.0",
+        "reqwest"                               : "~2.0.5"
+	},
+	"devDependencies": {}
+}

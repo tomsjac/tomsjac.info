@@ -1,0 +1,40 @@
+{
+	"name"			: "tomsjac/portfolio",
+	"description"	: "Portfolio Tomsjac",
+	"keywords"		: ["Portfolio", "thomas", "jacquey", "lead developper"],
+	"type"			: "project",
+	"authors"		: [
+		{
+			"name"	:	"Thomas Jacquey",
+			"role"	:	"Developer"
+		}
+	],
+	
+	"require"		: {
+		"php"						: ">=5.3.9",
+		"mobiledetect/mobiledetectlib": "^2.8",
+		"mustache/mustache": "~2.9",
+		"linkorb/jsmin-php":  "1.0.0",
+		"leafo/lessphp": "0.5.0",
+		"raulfraile/jivaro": "dev-master",
+        "symfony/http-foundation": "3.0.6"
+	},
+	
+	"require-dev"	: {},
+	
+	"autoload"		: {
+        "psr-4"		: {
+            "Core\\"		: "core",
+			"App\\"         : "app"
+		}
+	},
+    "scripts": {
+		"post-install-cmd": [
+			"npm --prefix app/resources/packages install"
+		],
+		"post-update-cmd": [
+			"npm --prefix app/resources/packages update"
+		]
+	},
+	"minimum-stability"	: "stable"
+}
