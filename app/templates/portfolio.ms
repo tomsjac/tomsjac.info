@@ -16,10 +16,10 @@
 	</header>
 
 	<article>
-		<div id='listProj'>
-			<ul>
-				{{# projetList }}
-					<li id="block{{ block }}-pane">
+        <div class="swiper-container"  id='listProj'>
+            <div class="swiper-wrapper">
+                {{# projetList }}
+					<div class="swiper-slide">
 						{{# details }}
 							<figure data-type='{{ type }}'>
 								<a href='{{&infosEnv.SCRIPT_NAME}}/portfolio/{{ id }}/'>
@@ -31,23 +31,18 @@
 								</a>
 							</figure>
 						{{/ details }}
-					</li>
+					</div>
 				{{/ projetList }}
-			</ul>
-		</div>
-		
-		<ul id="menuSlide">
-			{{# projetList }}
-				<li> 
-					<a href="#block{{ block }}-pane" >&nbsp;</a> 
-				</li>
-			{{/ projetList }}
-		</ul>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" id='paginationSlideP'></div>
 
-		<nav>
-			<a href='javascript:void(0)' data-direction='left' id='navListPLeft'>&nbsp;</a>
-			<a href='javascript:void(0)' data-direction='right' id='navListPRight' >&nbsp;</a>
-		</nav>
+        <!-- Add Arrows -->
+        <nav>
+            <a class="swiper-button-next" id='nextSlideP' data-direction='right'></a>
+            <a class="swiper-button-prev" id='prevSlideP' data-direction='left'> </a>
+        </nav>
 	</article>
 </section>
 

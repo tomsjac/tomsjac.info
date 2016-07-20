@@ -109,7 +109,7 @@ class Page
     }
 
     /**
-     * Méthode appelée avant le chargment du controller
+     * Méthode appelée avant le chargement du controller
      */
     protected function beforeExec()
     {
@@ -117,7 +117,7 @@ class Page
     }
 
     /**
-     * Méthode appelée après le chargment du controller
+     * Méthode appelée après le chargement du controller
      */
     protected function afterExec()
     {
@@ -130,48 +130,49 @@ class Page
      * @param array $array	Tableau contenant les css à charger
      * @param array $group		type de ressource (global / module / package)
      */
-    protected function setCss($array, $group = 'global')
+    protected function setStyle($array, $group = 'global')
     {
         array_walk($array, function(&$item) {
             $item = PATHCSS.$item;
         });
-        return $this->addAsset($array, 'css', $group, 'top');
+        return $this->addAsset($array, 'style', $group, 'top');
     }
 
     /**
      * Methode pour ajouter les JS souhaités
      *
      * @param array $array		Tableau contenant les js à charger
-     * @param array $group		   type de ressource (global / module)
-     * @param array $location	   position de chargement dans le code HTML (top / bottom)
+     * @param array $group		type de ressource (global / module)
+     * @param array $location	position de chargement dans le code HTML (top / bottom)
      */
-    protected function setJs($array, $group = 'global', $location = 'top')
+    protected function setScript($array, $group = 'global', $location = 'top')
     {
         array_walk($array, function(&$item) {
             $item = PATHJS.$item;
         });
-        return $this->addAsset($array, 'js', $group, $location);
+        return $this->addAsset($array, 'script', $group, $location);
     }
 
     /**
      * Methode pour ajouter les packages 'node_modules'
      *
      * @param array $array		  Tableau contenant les js à charger
+     * @param array $typeAsset     script / style
      * @param array $group		   type de ressource (global / module)
      * @param array $location	   position de chargement dans le code HTML (top / bottom)
      */
-    protected function setPackage($array, $group = 'global', $location = 'top')
+    protected function setPackage($array, $typeAsset = 'script', $group = 'global', $location = 'top')
     {
         array_walk($array, function(&$item) {
             $item = PATHPACKAGE.$item;
         });
-        return $this->addAsset($array, 'js', $group, $location);
+        return $this->addAsset($array, $typeAsset, $group, $location);
     }
 
     /**
      * Gestion de l'ajout des assets pour la page
      * @param array $assetAdd      Tableau des assets à ajouter
-     * @param str $type            'js' / 'css'
+     * @param str $type            'script' / 'style'
      * @param str $group           nom du groupe de fichier
      * @param array $location	   position de chargement dans le code HTML (top / bottom)
      * @return boolean

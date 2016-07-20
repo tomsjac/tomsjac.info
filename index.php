@@ -14,10 +14,12 @@
  * ------------------------------------------------------
  */
 define('TJ_VERSION', '1.1.0');       //Version du site
-if ($_SERVER['HTTP_HOST'] == 'tomsjac.info' or $_SERVER['HTTP_HOST'] == 'www.tomsjac.info') {
+if ($_SERVER['HTTP_HOST'] == 'tomsjac.info'
+    or $_SERVER['HTTP_HOST'] == 'www.tomsjac.info'
+    or $_SERVER['HTTP_HOST'] == 'test.tomsjac.info') {
     define('WORKENV', 'prod');     //Mode Prod, en ligne / activation des caches
 } else {
-	define('WORKENV', 'dev');     //Mode dev
+    define('WORKENV', 'dev');     //Mode dev
 }
 
 //Constante pour le routeur
@@ -32,8 +34,8 @@ define('PATHCACHE', 'storage/');
 define('PATHTEMPLATE', 'app/templates/');
 define('PATHCACHETEMPLATE', PATHCACHE . 'mustache/');
 
-define('PATHCSS', 'app/resources/css/');
-define('PATHJS', 'app/resources/js/');
+define('PATHCSS', 'app/resources/style/');
+define('PATHJS', 'app/resources/script/');
 define('PATHPACKAGE', 'app/resources/packages/node_modules/');
 define('PATHCACHEJSCSS', PATHCACHE . 'cacheJsCss/');
 define('PATHWEBCACHEJSCSS', 'cacheJsCss/');

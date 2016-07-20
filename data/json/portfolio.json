@@ -34,7 +34,7 @@
 								{
 									"img" 		  : "/data/images/webcd/kateji/slide4.jpg", 
 									"imgZoom" 	  : "/data/images/webcd/kateji/zoom4.jpg", 
-									"details" 	  : "KATEJI extranet : Page d'authentification"
+									"details" 	  : "Documentation du framework, selon les versions"
 								},
 								{
 									"img" 		  : "/data/images/webcd/kateji/slide5.jpg", 
@@ -44,6 +44,43 @@
 							]
 	},
 	
+    //**********************************//
+	//*********** Plus que Pro**********//
+	//**********************************//
+    "plusquepro":
+    {
+		"nom"				: "Plus que pro",
+		"slogan"			: "Avis clients pour choisir la bonne entreprise",
+		"type"				: "pro",
+		"categorie"         : "Extranet / Api",
+		"imgMiniature"		: "/data/images/webcd/plusquepro/apercu.jpg",
+		"localisation"		: "Webcd - Obernai", 
+		"dateRealisation" 	: "Depuis Janvier.2015",
+		"languageOutils"	: "PHP5 - Sql / HTML - CSS / JS - Slim framework",
+		"description"		: "Mise en place de plusieurs outils de gestion de la constellation PQP, allant de l'avant-vente à la gestion des adhérents, ainsi qu'une API permettant de partager les différentes informations entre chaque plateforme / outils, et les widgets pour les sites web du client.",
+		"urlSite"			: [{"intitule" : "www.plus-que-pro.fr", "link" : "http://www.plus-que-pro.fr/"}],
+		"imgSlide" 			: [
+								{
+									"img" 			: "/data/images/webcd/plusquepro/slide1.jpg", 
+									"imgZoom" 		: "/data/images/webcd/plusquepro/zoom1.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Workflow de suivi des adhérents"
+								},
+								{
+									"img" 			: "/data/images/webcd/plusquepro/slide2.jpg", 
+									"imgZoom" 		: "/data/images/webcd/plusquepro/zoom2.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Statistique et suivi des dossiers adhérents : Avis / rendez-vous / Actions"
+								},
+								{
+									"img" 			: "/data/images/webcd/plusquepro/slide3.jpg", 
+									"imgZoom" 		: "/data/images/webcd/plusquepro/zoom3.jpg", 
+									"msgImgSlide" 	: "Les captures d'écran proviennent de l'extranet de dev. Toutes les données sont factices",
+									"details" 		: "Tableau de bord de suivi pour les adhérents depuis leur propre CRM"
+								}
+							]
+	},
+    
 	//**********************************//
 	//*********** Blog à deux **********//
 	//**********************************//
@@ -160,7 +197,7 @@
 		"categorie"         : "Réseaux sociaux", 
 		"imgMiniature"		: "/data/images/perso/newsactus/apercu.jpg",
 		"localisation"		: "Rosheim",
-		"dateRealisation" 	: "Depuis Déc.2011",
+		"dateRealisation" 	: "Déc.2011 - Juin.2014",
 		"languageOutils"	: "PHP5 - SQL / Api Twitter, Facebook",
 		"description"		: "Système d'actualités en temps réel basés sur les flux RSS et Twitter. Les comptes axés sur divers thèmes sont alimentés par les fils d'actus des meilleurs sites. Les followers sont redirigés vers les articles de ses sites en transitant via une page tampon de pub. La promotion de ses comptes est réalisée via une application maison qui suit automatiquement les followers qui seraient intéressés par ses news.",
 		"urlSite"			: [{"intitule" : "Projet vendu", "link" : "#"}],

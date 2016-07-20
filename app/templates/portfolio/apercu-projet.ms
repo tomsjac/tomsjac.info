@@ -16,50 +16,51 @@
 	</header>
 	
 	<figure>
-		<div id='slideImgDProj'>
-			<ul>
-				{{# infosProjet.imgSlide }}
-					<li id="img{{ key }}-pane">
+        <div class="swiper-container" id='slideImgDProj'>
+            <div class="swiper-wrapper">
+                {{# infosProjet.imgSlide }}
+					<div class="swiper-slide">
 						<a href="#imageZoom-{{ key }}">
 							<img src="{{& infosEnv.SCRIPT_NAME }}{{& val.img }}" width='447' height='289'  alt="" />
 							{{#  val.msgImgSlide }} 
 								<div class='msgImgSlide'>{{& val.msgImgSlide }}</div>
 							{{/  val.msgImgSlide }}
 						</a>	
-						<div class="lb-overlay" id="imageZoom-{{ key }}">
-							<a href='#' class='lb-close'>X</a>
-							<a href='#' class='lb-left'>&nbsp;</a>
-							<a href='#' class='lb-right'>&nbsp;</a>
-							<img src="{{& infosEnv.SCRIPT_NAME }}{{& val.imgZoom }}" alt="" />
-							<div>{{ val.details }}</div>
-						</div>
-					</li>
+					</div>
 				{{/ infosProjet.imgSlide }}
-			</ul>
-		</div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" id='paginationSlideIP' ></div>
 
-		<ul id="menuImgSlide">
-			{{#  infosProjet.imgSlide }}
-				<li> 
-					<a href="#img{{ key }}-pane" >&nbsp;</a> 
-				</li>
-			{{/  infosProjet.imgSlide }}
-		</ul>
-		
 		<figcaption>
 			<hr class='degradContent left bloc1'/><hr class='degradContent right bloc1'/>
 			<hr class='degradContent left bloc2'/><hr class='degradContent right bloc2'/>
 			<hr class='degradContent left bloc3'/><hr class='degradContent right bloc3'/>
-			<hr class='degradContent left bloc4'/><hr class='degradContent right bloc4'/>
+			{{! <hr class='degradContent left bloc4'/><hr class='degradContent right bloc4'/> }}
 			<p>{{ infosProjet.description }}</p>
 		</figcaption>
+        
+        <!-- detailed project overview -->
+        <section id='overviewProject' >
+            {{# infosProjet.imgSlide }}
+                <div class="lb-overlay" id="imageZoom-{{ key }}">
+                    <a href='#' class='lb-close'>X</a>
+                    <a href='#' class='lb-left'>&nbsp;</a>
+                    <a href='#' class='lb-right'>&nbsp;</a>
+                    <img src="{{& infosEnv.SCRIPT_NAME }}{{& val.imgZoom }}" alt="" />
+                    <div>{{ val.details }}</div>
+                </div>
+            {{/ infosProjet.imgSlide }}
+        </section>
 	</figure>	
 
 	<nav>
-		<div id='arrowSlide' >
-			<a href='javascript:void(0)' data-direction='left' id='navImgSlideLeft'>&nbsp;</a>
-			<a href='javascript:void(0)' data-direction='right' id='navImgSlideRight'>&nbsp;</a>
-		</div>
+        <!-- Add Arrows -->
+        <div id='arrowSlide'>
+            <a class="swiper-button-next" id='nextSlideIP' data-direction='right'></a>
+            <a class="swiper-button-prev" id='prevSlideIP' data-direction='left'> </a>
+        </div>
 
 		<div id='close' >
 			<a href='{{& infosEnv.SCRIPT_NAME }}/portfolio/' data-type='left'>&nbsp;</a>

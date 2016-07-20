@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/**
+ * Mise en page du contenu principal (le beau soleil)
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+
+body > div#circle{
+	position:relative;
+	width:@widthCircle;
+	height:@heightcircle;
+	margin:@marginTopContent auto 0 auto;
+	background: transparent url("@{pathImg}/backgroung-content.png") left top repeat;
+	border:10px @borderContentColor solid;
+	.border-radius(50%);
+	.box-shadow(0px,0px,20px,fade(@borderContentColor, 60%));
+
+	header{
+		height:120px;
+		h1{
+			position:absolute;
+			//z-index:102;
+			width:535px;
+			height:60px;
+			left:50px;
+			bottom:0px;
+			background: transparent url("@{pathImg}/ribbon-h1-content.png") top left no-repeat;
+			text-align:center;
+			color:#7b7b7b;
+			font-family:bebas_neueregular;
+			font-size:2em;
+			line-height:48px;
+			letter-spacing:2px;
+		}
+		
+		h2{
+			margin:40px 0px 0px 0px;
+			font-family:bebas_neueregular;
+			font-size:1.8em;
+			text-align:center;
+			letter-spacing:0.1em;
+		}
+		
+		&:after{
+			content:"";
+			display:block;
+			height:10px;
+			margin:20px 0px 0px 0px;
+			background: transparent url("@{pathImg}/separ-contenu.png") center top no-repeat;
+		}
+	}
+	
+	article{
+		height:393px;
+		padding:0px 67px 0px 67px;
+		
+		a{
+			color:#7b7b7b;
+		}
+		/*border:1px red solid;*/
+	}
+}

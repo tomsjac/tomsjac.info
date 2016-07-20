@@ -205,11 +205,18 @@ class FrontController extends \Core\system\Page
      */
     private function loadAssetStyleLayout()
     {
-         $this->setCss(
+         $this->setStyle(
             array(
-            'vendor/normalize.css',
-            'main.less'
+            'main.less',
             ), 'global'
+        );
+
+        //Package NPM
+        $this->setPackage(
+            array(
+            'normalize.css/normalize.css',
+            'swiper/dist/css/swiper.min.css',
+            ), 'style', 'global'
         );
 
         return true;
@@ -221,7 +228,7 @@ class FrontController extends \Core\system\Page
     private function loadAssetScriptLayout()
     {
         //En haut de page
-        $this->setJs(
+        $this->setScript(
             array('vendor/modernizr-respond.min.js'), 'global', 'top'
         );
 
@@ -230,11 +237,11 @@ class FrontController extends \Core\system\Page
             array(
             'mustache/mustache.js',
             'requirejs/require.js'
-            ), 'global', 'bottom'
+            ), 'script', 'global', 'bottom'
         );
 
         //En bas de page
-        $this->setJs(
+        $this->setScript(
             array(
             'routeur.js',
             'routes.js',

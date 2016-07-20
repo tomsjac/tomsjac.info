@@ -54,14 +54,14 @@
 
 
 		<!-- CSS -->
-		{{#listAsset.css.top}}
+		{{#listAsset.style.top}}
 			<link rel="stylesheet" type="text/css" href="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}" media="all" />
-		{{/listAsset.css.top}}
-		
+		{{/listAsset.style.top}}
+
 		<!-- JS Head -->
-		{{#listAsset.js.top}}
+		{{#listAsset.script.top}}
 			<script src="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}"></script>
-		{{/listAsset.js.top}}
+		{{/listAsset.script.top}}
     </head>
 	
     <body>
@@ -144,12 +144,7 @@
 				</ul>
 			</a>
 		</aside>
-		
-		{{! Message pour la version mobile en cours}}
-		<div id='versionMobile' >
-			La version mobile est en cours de développement
-		</div>
-	
+			
 		<footer>
 		    <div class='madeIn'>
 		    	Made with
@@ -168,7 +163,6 @@
 			<img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
 		</a>
 
-
 		<!-- JS Footer -->
         <script>
 			{{# modeProd}}
@@ -185,8 +179,8 @@
 			{{/ modeDev}}
         </script>
 		
-		{{#listAsset.js.bottom}}
+		{{#listAsset.script.bottom}}
 			<script src="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}"></script>
-		{{/listAsset.js.bottom}}
+		{{/listAsset.script.bottom}}
     </body>
 </html>

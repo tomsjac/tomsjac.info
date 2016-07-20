@@ -3,7 +3,7 @@
 	
 	<h2>LEAD DEVELOPPEUR PHP</h2>
 	
-	<h3>Spécialisé : Extranet / Intranet / Application spécifique </h3>
+	<h3>Spécialisé : Extranet / Intranet / Application spécifique / Web </h3>
 	
 	<hr/>
 	

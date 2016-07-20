@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+ * Mise en page du contenu principal (le beau soleil)
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+footer{
+	width:100%;
+	margin-top:5%;
+	color: #FFF;
+	text-align:center;
+	overflow: hidden;
+
+	.madeIn{
+		display: inline-block;
+		.heart {
+			position: relative;
+			width: 30px;
+			height: 30px;
+			vertical-align: middle;
+			.animation(throb 4.33s ease-in-out 0s normal none infinite);
+			path {
+				fill: #FF005D;
+			}
+		}	
+	}
+}

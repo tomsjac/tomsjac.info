@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/**
+ *  Responsive de la page Portfolio
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+
+/********************************************/
+/************  Version Mobile ***************/
+/********************************************/
+.mediaScreenMobile(){
+    /* ====== Lsiting des projets ======= */
+    body > div#circle > div#content > section#content-portfolio{
+        
+        header h1{
+            background-position:0 -66px;
+        }
+
+        header h2{
+            padding-top:5px;
+			font-size:1.3em;
+		}
+        
+        header section{
+			margin-top:5px;
+			ul{
+				width:98%;
+            }
+        }
+        
+        article{
+            margin-top:0px;
+            padding-left:0;
+        }
+ 
+        article div.swiper-container .swiper-wrapper .swiper-slide figure a img{
+            width:120px;
+            height:80px;
+            padding:2px 2px 0px 2px;
+        }
+        
+        article > .swiper-pagination{
+            margin-top:10px;
+        }
+        
+        article nav a[data-direction=left], article nav a[data-direction=right]{
+            top:auto;
+            bottom:0;
+        }
+    }
+    
+    /* ====== Détails d'un projet ======= */
+    body > div#circle > div#content > section#dt-projet{
+        width:100%;
+        margin:-5px 0 0 -4px;
+        font-size:90%;
+        .border-radius(10px);
+        border-width: 4px;
+        height: 100%;
+        background-color: #FFF;
+        background-image: none;
+        
+        header > h1{
+            background: none;
+            margin-top:5px;
+        }
+        
+        header > h2{
+            margin-top:6px;
+        }
+          
+        header > h3{
+            font-size:1.1em;
+        }
+        
+        header > ul{
+            width:90%;
+            margin:10px 0 0 0;
+            padding: 0 5%;
+        }        
+        
+        figure{
+            margin:-10px 0 0 0;
+        }
+        
+        figure > div#slideImgDProj{           
+            margin:0 5% 0 4%;
+            img{
+                width:98%;
+                height:98%;
+            }
+            ul > li > a{cursor:default;}
+        }
+        
+        figure .swiper-pagination{
+            margin-top:10px;
+        }
+        
+        figure figcaption{
+            .degradContent  {
+                display: none;
+            }
+            p{
+                margin-top:15px;
+                padding:0 4%;
+                color:#7b7b7b;
+                font-size:1.1em;
+                height:120px;
+                text-align:justify;
+                overflow-y: auto;
+            }
+        }
+        
+        nav{
+            div#arrowSlide{
+                .navArrowPortfolio;
+                a[data-direction=left], a[data-direction=right]{ bottom:0;}
+                a[data-direction=left]{left:-20px;}
+                a[data-direction=right]{right:-20px;}
+            }
+            div#close{
+                a[data-type=left]{
+                    display:none;
+                    visibility: none;
+                }
+                
+                a[data-type=right]{
+                    position:absolute;
+                    top:-25px;
+                    right:-20px;
+                    width:31px;
+                    height:31px;
+                    text-decoration:none;
+                    background: none;
+                 }
+            }
+        }
+        
+        //si c'est un apercu direct, on fait une animation
+        &.liveView{
+            &.closeDp{
+                &.left{
+                    .animation(slideUp 1s ease);
+                }	
+                &.right{
+                    .animation(slideUp 1s ease);
+                }	
+            }		
+        }
+        
+
+        //On affiche pas le slide d'apercu de projet
+        .lb-overlay{
+            display:none;
+        }
+    }
+}
+
+.mediaScreenMobile320(){
+    body > div#circle > div#content > section#content-portfolio{
+        article div#listProj div div figure a img{
+            width:100px;
+            height:73px;
+        }
+    }
+}

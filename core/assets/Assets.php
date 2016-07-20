@@ -293,7 +293,7 @@ class Assets
             if (isset($less) === false) {
                 $less = new \lessc();
                 //on ajoute les répertoires CSS possible pour l'import
-                $less->setImportDir($this->infoServer['PATH_SERVER'].PATHCSS);
+                $less->setImportDir([$this->infoServer['PATH_SERVER'].PATHCSS, $this->infoServer['PATH_SERVER'].PATHPACKAGE]);
             }
 
             return $less->compile($content);

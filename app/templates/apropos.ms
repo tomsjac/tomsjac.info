@@ -1,7 +1,7 @@
 <section id='content-apropos'>
 	<header>
 		<h1>A Propos</h1>
-		<h2>Faisons  connaissance !</h2>
+		<h2>Faisons connaissance !</h2>
 		<div>
 			Retrouvez aussi mon profil sur :
 			{{#linkData.linkViadeo}}
@@ -12,7 +12,7 @@
 			
 			{{#linkData.linkLinkedin}}
 				<a href='{{linkData.linkLinkedin}}'>
-					<img src='{{infosEnv.SCRIPT_NAME}}/img/linkedin-aPropos.png' alt='linkedin'  title='linkedin' width='24' height='24' />
+					<img src='{{infosEnv.SCRIPT_NAME}}/img/linkedin-aPropos.png' alt='Linkedin'  title='Linkedin' width='24' height='24' />
 				</a>
 			{{/linkData.linkLinkedin}}
 		</div>

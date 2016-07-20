@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/**
+ * Mise en page du menu
+ *
+ * @author   Thomas
+ * @version  1.0.0
+ */
+body > header{
+	position:relative;
+	z-index:100;
+	width:100%;
+	margin:0px auto;
+	
+	nav{
+		z-index: 120;
+		ul{
+			li{
+				position:absolute;
+				top:-@marginTopContent;
+				list-style:none;
+				padding:0;
+				margin:0px;
+				background: transparent url("@{pathImg}/sprite-menu.png") top left no-repeat;
+
+				a{
+					position:absolute;
+					width:100%;
+					bottom:8px;
+					display:inline-block;
+					font-family:doctor_soos;
+					font-size:1.5em;
+					padding:50px 0 0 0;
+					text-align:center;
+					text-decoration:none;
+					background: transparent url("@{pathImg}/sprite-menu.png") center bottom no-repeat;
+					.transition(background 0.3s ease-in-out);
+					/*border:1px red solid;*/
+					&:hover, &.active{
+						text-decoration:underline;
+						.transition(background 0.3s ease-in-out);
+					}					
+				}
+				
+				/* ====== Item A propos ======= */
+				&#nav-apropos{
+					width:75px;
+					height: 193px; 
+					background-position: 0px -3px;
+					//left:0px; //left:13%;
+					right:82%;
+					a{
+						margin-left:-5px;
+						background-position: -290px -70px;
+						color:#ffe1df;
+						&:hover, &.active{
+							background-position: -290px 13px;
+						}
+					}
+				}
+				
+                /* ====== Item Profil ======= */
+				&#nav-profil{
+					width: 71px; 
+					height: 181px; 
+					background-position: -209px -9px; 
+					//left:130px; //left:23%;
+					right:72%;
+					a{
+						background-position: -516px -70px;
+						color:#b4ac45;
+						&:hover, &.active{
+							background-position: -516px 13px;
+						}
+					}
+				}
+				
+                /* ====== Item Portfolio ======= */
+				&#nav-portfolio{
+					width: 66px; 
+					height: 161px; 
+					background-position: -143px -19px;
+					//left:750px;
+					left:72%;
+					
+					a{
+						background-position: -443px -70px;
+						color:#557b14;
+						&:hover, &.active{
+							background-position: -443px 13px;
+						}
+					}
+				}		
+                
+				/* ====== Item Contact ======= */
+				&#nav-contact{
+					width: 68px; 
+					height: 199px; 
+					background-position: -75px 0px;
+					//left:880px;
+					left:82%;
+					
+					a{
+						background-position: -370px -70px;
+						color:#b36a04;
+						&:hover, &.active{
+							background-position: -370px 13px;
+						}
+					}	
+				}
+			}
+		}
+	}
+}

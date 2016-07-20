@@ -30,7 +30,8 @@
 	},
     "scripts": {
 		"post-install-cmd": [
-			"npm --prefix app/resources/packages install"
+			"npm --prefix app/resources/packages install",
+            "php -r \"mkdir('storage', 0777, true);chmod('storage', 0777);\""
 		],
 		"post-update-cmd": [
 			"npm --prefix app/resources/packages update"

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/**
+ *  Responsive de la page Profil
+ *
+ * @author   Thomas
+ * @version  1.1.0
+ */
+/********************************************/
+/************  Version Mobile ***************/
+/********************************************/
+.mediaScreenMobile(){
+    body > div#circle > div#content > section#content-profil{
+        header h1{
+            background-position:0 -32px;
+            color:#7e782e;
+        }
+        
+        header h2{
+            padding-top:5px;
+			font-size:1.3em;
+		}
+        
+        header nav{
+			margin-top:10px;
+			margin-bottom:-18px;
+            
+            ul{
+                width:91%;
+            }
+        }
+        
+        article{
+            h3{
+                margin-top:-15px;
+                font-size:1.4em;
+                &:before{
+				padding-right:15px;
+                }
+                &:after{
+                    padding-left:15px;
+                }
+            }
+            
+            ul{
+              padding-left:20px;
+            }
+            
+        }
+    }
+}
