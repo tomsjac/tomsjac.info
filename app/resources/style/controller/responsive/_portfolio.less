@@ -33,10 +33,15 @@
             margin-top:0px;
             padding-left:0;
         }
- 
+        
+        article div.swiper-container .swiper-wrapper .swiper-slide figure{
+            max-width:38%;
+        }
+        
         article div.swiper-container .swiper-wrapper .swiper-slide figure a img{
-            width:120px;
-            height:80px;
+            width:initial;
+            height:initial;
+            max-width:95%;
             padding:2px 2px 0px 2px;
         }
         
@@ -114,10 +119,10 @@
         
         nav{
             div#arrowSlide{
-                .navArrowPortfolio;
-                a[data-direction=left], a[data-direction=right]{ bottom:0;}
-                a[data-direction=left]{left:-20px;}
-                a[data-direction=right]{right:-20px;}
+                //.navArrowPortfolio;
+                a[data-direction=left], a[data-direction=right]{
+                    top:auto;
+                }
             }
             div#close{
                 a[data-type=left]{
@@ -153,15 +158,6 @@
         //On affiche pas le slide d'apercu de projet
         .lb-overlay{
             display:none;
-        }
-    }
-}
-
-.mediaScreenMobile320(){
-    body > div#circle > div#content > section#content-portfolio{
-        article div#listProj div div figure a img{
-            width:100px;
-            height:73px;
         }
     }
 }

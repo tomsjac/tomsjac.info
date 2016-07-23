@@ -215,9 +215,14 @@ class Page
         foreach ($this->tabAssetsFiles as $type => $detGroupe) {
             foreach ($detGroupe as $group => $detLoc) {
                 foreach ($detLoc as $location => $list) {
-                    $listAssets[$type][$location] = $assetsFiles->groupFiles(
+                    if (isset($listAssets[$type][$location]) === false) {
+                        $listAssets[$type][$location] = array();
+                    }
+                    $pathGenerateFile = $assetsFiles->groupFiles(
                         $list, $type, $group.'_'.$location, $enteteGroupFile
                     );
+
+                    $listAssets[$type][$location] = array_merge($listAssets[$type][$location], $pathGenerateFile);
                 }
             }
         }

@@ -192,7 +192,7 @@ class Assets
      * Combine File : En dev pas de compilation, en Prod 1 seul fichier créer en cache
      *
      * @param array $groupFile    Tableau des fichiers à traiter
-     * @param str 	$typeFile  	  Type de fichier 'js' ou 'css'
+     * @param str 	$typeFile  	  Type de fichier 'script' ou 'style'
      * @param str 	$nameCache    Nom du fichier en cache, si null, hash de la chaine
      * @param str 	$commentFile  Texte de commentaire au début du fichier
      * @return array retourne la liste des fichiers (path complet) à charger dans le layout
@@ -201,9 +201,9 @@ class Assets
     {
         $returnFiles = array();
 
-        if ($typeFile == 'js') {
+        if ($typeFile == 'script') {
             $extension = '.js';
-        } elseif ($typeFile == 'css') {
+        } elseif ($typeFile == 'style') {
             $extension = '.css';
         }
 
@@ -227,7 +227,7 @@ class Assets
 
                 //on récupére le contenu de tous les fichiers
                 foreach ($groupFile as $file) {
-                    if ($typeFile == 'js') {
+                    if ($typeFile == 'script') {
                         $contentGlobal .= $this->compileJS($file, 'content', true);
                     } else {
                         $contentGlobal .= $this->compileCss($file, 'content', true);
@@ -244,7 +244,7 @@ class Assets
             //**** DEV : on s'occupe que de récupérer les fichiers parsés
             foreach ($groupFile as $file) {
                 $this->setContentListFile($commentFile, true);
-                if ($typeFile == 'js') {
+                if ($typeFile == 'script') {
                     $returnFiles[] = $this->compileJS($file, 'path');
                 } else {
                     $returnFiles[] = $this->compileCss($file, 'path');
@@ -321,7 +321,7 @@ class Assets
      */
     protected function minifyJs($content)
     {
-        return \JSMin::minify($content);
+        return \JShrink\Minifier::minify($content);
     }
 
     /**
@@ -355,9 +355,10 @@ class Assets
 
         //verifie si le dossier existe sinon on le cree
         if (is_dir($pathCache) === false) {
-            if (!(@mkdir($pathCache, 0770))) {
+            if (!(mkdir($pathCache, 0770))) {
                 trigger_error('Impossible de créer le dossier : '.$pathCache, E_USER_ERROR);
             }
+            chmod($pathCache, 0770);
         }
 
         //on verifie si le fichier existe
@@ -376,8 +377,8 @@ class Assets
         } else {
             fwrite($fp, $content);
             fclose($fp);
+            chmod($pathFileCache, 0770);
         }
-
         return true;
     }
 
