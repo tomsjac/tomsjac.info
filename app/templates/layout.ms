@@ -60,7 +60,7 @@
 
 		<!-- JS Head -->
 		{{#listAsset.script.top}}
-			<script src="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}"></script>
+			<script src="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}" async></script>
 		{{/listAsset.script.top}}
     </head>
 	
@@ -164,12 +164,15 @@
 		</a>
 
 		<!-- JS Footer -->
-        <script>
+		<script>
 			{{# modeProd}}
-	            var _gaq=[['_setAccount','UA-51078850-1'],['_trackPageview']];
-	            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	            s.parentNode.insertBefore(g,s)}(document,'script'));
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-51078850-1', 'auto');
+				ga('send', 'pageview');
 			{{/ modeProd}}
 			<!-- on definit la racine pour le routage -->
 			var rewriteBase = '{{infosEnv.SCRIPT_NAME}}';
@@ -177,10 +180,10 @@
 			{{# modeDev}}
 				var inDevelopment = true;
 			{{/ modeDev}}
-        </script>
-		
+			
+		</script>		
 		{{#listAsset.script.bottom}}
-			<script src="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}"></script>
+			<script src="{{infosEnv.SCRIPT_NAME}}/{{.}}?ver={{version}}" async></script>
 		{{/listAsset.script.bottom}}
     </body>
 </html>

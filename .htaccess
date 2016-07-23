@@ -37,9 +37,9 @@ AddCharset utf-8 .css .js .xml .json .rss .atom
 # COMPRESS TEXT, HTML, JAVASCRIPT, CSS, XML 'non fonctionnel avec 1and1'
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-  <FilesMatch ".(js|css|xml|gz|html)$">
+    <FilesMatch ".(js|css|xml|gz|html)$">
       Header append Vary Accept-Encoding
-  </FilesMatch>
+    </FilesMatch>
 </IfModule>
 
 <IfModule mod_gzip.c>
@@ -108,15 +108,24 @@ AddType application/octet-stream .pdf
 </IfModule>
 
 # ----------------------------------------------------------------------
+# SECURITY
+# ----------------------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-FRAME-OPTIONS "DENY"
+	Header set Content-Security-Policy "script-src 'self' https://www.google.com"
+	Header always set X-XSS-Protection "1; mode=block"
+	Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# ----------------------------------------------------------------------
 # REECRITURE D'URL #
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
-	#RewriteBase /
+	RewriteBase /
 
     # Canonical Hostnames
-    RewriteCond %{HTTP_HOST}   !^www\.tomsjac\.info [NC]
-    RewriteCond %{HTTP_HOST}   !^$
-    RewriteRule ^/(.*)         http://www.tomsjac.info/$1 [L,R]
+	RewriteCond %{HTTP_HOST} ^tomsjac.info
+	RewriteRule (.*) http://www.tomsjac.info$1 [R=301,L]
         
     ## Liste Noire, Liste des dossiers protégés
     RewriteRule ^app/(controller|models|templates)/.*       index.php [L,NC]
