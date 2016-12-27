@@ -122,7 +122,11 @@ AddType application/octet-stream .pdf
 # ----------------------------------------------------------------------
 <IfModule mod_rewrite.c>
 	RewriteBase /
-
+	
+	#SSL
+	RewriteCond %{HTTPS} off
+	RewriteRule (.*) 	https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+	
     # Canonical Hostnames
 	RewriteCond %{HTTP_HOST} ^tomsjac.info
 	RewriteRule (.*) http://www.tomsjac.info$1 [R=301,L]
