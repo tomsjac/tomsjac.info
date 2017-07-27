@@ -12,15 +12,15 @@
 <div>Langages :</div>
 <ul>
 	<li>
-		<i>Structure :</i> Html5, canvas
+		<i>Structure :</i> HTML, Etude de VueJS
 	</li>
 	<li>
-		<i>Mise en page :</i> Css3, Media Queries
+		<i>Mise en page :</i> CSS, SASS, LESS
 	</li>
 	<li>
-		<i>Javascript :</i> JS POO, Ajax / WebSocket, étude de BackboneJs / AngularJS
+		<i>Javascript :</i> JS (EcmaScript 6), Ajax / WebSocket
 	</li>
 	<li>
-		<i>Autres :</i> étude de NodeJs (Grunt, Bower)
+		<i>Autres :</i>  Webpack
 	</li>
 </ul>

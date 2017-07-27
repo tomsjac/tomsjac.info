@@ -25,13 +25,16 @@
 		<i>Programmation :</i> PHP (Programmation Orientée Objet), API ...
 	</li>
 	<li>
+		<i>Framework :</i> KATEJI, Slim, Laravel, Symfony
+	</li>
+	<li>
 		<i>Base de données :</i> Mysql, PostgreSQL, MariaDB
 	</li>
 	<li>
-		<i>Templating :</i> Smarty, Twig, Moustache
+		<i>Templating :</i> Smarty, Twig, Blade, Moustache
 	</li>
 	<li>
-		<i>Autres :</i> Htaccess, XML, JSON
+		<i>Autres :</i> Bash, Htaccess, XML, JSON
 	</li>
 </ul>
 
