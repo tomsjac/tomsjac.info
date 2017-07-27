@@ -9,9 +9,9 @@ body > div#circle > div#content > section#content-portfolio{
 
 	header{
 		h2{
-			font-size:1.6em;
+			font-size:1.5em;
 		}
-		
+
 		section{
 			margin-top:10px;
 			margin-bottom:-10px;
@@ -33,14 +33,14 @@ body > div#circle > div#content > section#content-portfolio{
 					&:last-child:after{content:'';}
 				}
 			}
-		
+
 		}
 	}
-	
+
 	article{
 		position:relative;
 		margin:-20px 0 0 0px;
-		
+
         /* ====== Slide + Listing des projets ======= */
 		div.swiper-container{
             height:100%;
@@ -51,7 +51,7 @@ body > div#circle > div#content > section#content-portfolio{
                     align-items: left;
                     flex-wrap: wrap;
                     -webkit-flex-wrap: wrap;
-                    
+
                     figure{
                         position:relative;
                         margin:5% 5%;
@@ -123,7 +123,7 @@ body > div#circle > div#content > section#content-portfolio{
                                 .box-shadow(0px,10px,10px,fade(@borderContentColor, 60%));
                             }
                         }
-                        
+
                         /* ====== Infos type Projet ======= */
                         &[data-type=pro]:before,&[data-type=perso]:before{
                             position:absolute;
@@ -188,7 +188,7 @@ body > div#circle > div#content > section#content-portfolio{
                 } //fin slide
             } //fin slide wrapper
 		} //Fin contenair slide
-        
+
         /* ====== Navigation Slider : Next / Prev ======= */
         > nav{
             .navArrowPortfolio;
@@ -232,7 +232,7 @@ body > div#circle > div#content > section#dt-projet{
 	background: transparent url("@{pathImg}/backgroung-content.png") left top repeat;
 	border:1px #727272 solid;
 	.border-radius(400px);
-	
+
     /* ====== Détails du projet ======= */
 	header{
 		h1{
@@ -241,7 +241,7 @@ body > div#circle > div#content > section#dt-projet{
 			color:#7b7b7b;
 			margin-top:25px;
 		}
-		
+
 		h3{
 			display:block;
 			margin:0 0 0 0;
@@ -285,7 +285,7 @@ body > div#circle > div#content > section#dt-projet{
 					font-size:1.4em;
 				}
 			}
-			
+
 			li.where{
 				display:inline-block;
 				width:49%;
@@ -293,7 +293,7 @@ body > div#circle > div#content > section#dt-projet{
 					content:"\e724";
 				}
 			}
-			
+
 			li.date{
 				display:inline-block;
 				width:49%;
@@ -302,7 +302,7 @@ body > div#circle > div#content > section#dt-projet{
 					content: "\1f4c5";
 				}
 			}
-			
+
 			li.code{
 				display:block;
 				margin-top:5px;
@@ -312,19 +312,19 @@ body > div#circle > div#content > section#dt-projet{
 				}
 			}
 		}
-		
+
 		&:after{
 			content:"";
 			background:none;
 		}
 	}
-	
+
     /* ====== Slider Capture écran du projet ======= */
 	figure{
 		position:relative;
 		margin:-20px 0 0 0;
 		padding:0;
-		
+
 		div#slideImgDProj{
 			position:relative;
 			overflow-x: hidden;
@@ -350,7 +350,7 @@ body > div#circle > div#content > section#dt-projet{
                 }
             }
 		}
-        
+
 		/* ====== Pagination du slider ======= */
         > .swiper-pagination{
             position: relative;
@@ -371,21 +371,21 @@ body > div#circle > div#content > section#dt-projet{
                 }
             }
         }
-		
+
         /* ====== Description du projet ======= */
 		figcaption{
 			.degradContent  {
 				margin:0;
 				padding:0;
-				overflow: hidden; 
+				overflow: hidden;
 				border:none;
 				&.left{
-					float: left; 
+					float: left;
 					clear: left;
 					//border:1px green solid;
 				}
 				&.right{
-					float: right; 
+					float: right;
 					clear: none;
 					//border:1px red solid;
 				}
@@ -393,7 +393,7 @@ body > div#circle > div#content > section#dt-projet{
 				&.bloc1{width: 80px ; height: 20px; margin-top:40px;}
 				&.bloc2{width: 95px ; height: 20px;}
 				&.bloc3{width: 115px ; height: 20px;}
-				/*&.bloc4{width: 135px ; height: 20px;}*/			
+				/*&.bloc4{width: 135px ; height: 20px;}*/
 			}
 
 			p{
@@ -406,13 +406,13 @@ body > div#circle > div#content > section#dt-projet{
 		}
 
 	}
-	
+
     /* ====== Navigation pour le Slider et Fermeture du projet ======= */
 	nav{
 		div#arrowSlide{
 			.navArrowPortfolio;
 		}
-		
+
 		div#close{
 			a[data-type=left], a[data-type=right]{
 				position:absolute;
@@ -435,7 +435,7 @@ body > div#circle > div#content > section#dt-projet{
 					color:#FFF;
 					text-align:center;
 					line-height:25px;
-					
+
 					background: #3e0803; /* Old browsers */
 					background: -moz-linear-gradient(top, #3e0803 0%, #61150c 100%); /* FF3.6+ */
 					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3e0803), color-stop(100%,#61150c)); /* Chrome,Safari4+ */
@@ -444,20 +444,20 @@ body > div#circle > div#content > section#dt-projet{
 					background: -ms-linear-gradient(top, #3e0803 0%,#61150c 100%); /* IE10+ */
 					background: linear-gradient(to bottom, #3e0803 0%,#61150c 100%); /* W3C */
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e0803', endColorstr='#61150c',GradientType=0 ); /* IE6-9 */
-					
+
 					border:1px #000 solid;
 					.border-radius(5px);
 				}
-				
+
 				&:hover:after{
-				}					
-				
+				}
+
 			}
-			
+
 			a[data-type=left]{
 				left:10%;
 			}
-			
+
 			a[data-type=right]{
 				right:10%;
 				/* flip */
@@ -465,7 +465,7 @@ body > div#circle > div#content > section#dt-projet{
 				filter: FlipH;
 				-ms-filter: "FlipH";
 			}
-			
+
 		}
 	}
 
@@ -476,15 +476,15 @@ body > div#circle > div#content > section#dt-projet{
 		&.closeDp{
 			&.left{
 				.animation(coupezLeFilLeft 1.5s ease);
-			}	
+			}
 			&.right{
 				.animation(coupezLeFilRight 1.5s ease);
-			}	
-		}		
+			}
+		}
 	}
 
 }
-	
+
 /********************************************/
 /************  Contenu Portfolio ************/
 /** Fleche de navigation pour le portfolio **/
@@ -509,18 +509,18 @@ body > div#circle > div#content > section#dt-projet{
 			text-align:right;
 		}
 	}
-	
+
 	a[data-direction=right]{
         margin-right: 20px;
 		&:hover{
 			text-align:right;
 		}
 	}
-	
+
 	a[data-direction=left]:before{
 		content:"\2192";
 	}
-	
+
 	a[data-direction=right]:before{
 		content:"\2192";
 	}
@@ -543,7 +543,7 @@ body > div#circle > div#content > section#dt-projet{
 		top: 0px;
 		padding: 0px;
 		text-align: center;
-		
+
 		background: rgb(241,210,194);
 		background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%, rgba(241,210,194,1) 100%);
 		background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.56)), color-stop(100%,rgba(241,210,194,1)));
@@ -553,7 +553,7 @@ body > div#circle > div#content > section#dt-projet{
 		background: radial-gradient(center, ellipse cover, rgba(255,255,255,0.56) 0%,rgba(241,210,194,1) 100%);
 
 		cursor:pointer;
-		
+
 		a{
 			z-index: 301;
 			position: absolute;
@@ -580,7 +580,7 @@ body > div#circle > div#content > section#dt-projet{
 				top: 48%;
 				.transform(rotate(180deg));
 			}
-			
+
 			&.lb-right{
 				display:none;
 				z-index: 303;
@@ -602,9 +602,9 @@ body > div#circle > div#content > section#dt-projet{
 			&:hover{
 				.box-shadow(0px,0px,10px,fade(#000, 60%));
 			}
-			
+
 		}
-		
+
 		img{
 			/* height: 100%; For Opera max-height does not seem to work */
 			position: relative;
@@ -613,7 +613,7 @@ body > div#circle > div#content > section#dt-projet{
 			.box-shadow(1px,1px,4px,rgba(0,0,0,0.3));
 			cursor:default;
 		}
-		
+
 		div{
 			position: relative;
 			margin: 10px auto 0px auto;
@@ -622,20 +622,20 @@ body > div#circle > div#content > section#dt-projet{
 			cursor:default;
 
 		}
-			
+
 		&:target {
 			width: auto;
 			height: auto;
 			bottom: 0px;
 			right: 0px;
 			padding: 80px 100px 120px 100px;
-			
+
 			img,
-			a, 
+			a,
 			> div{
 				.animation(fadeInScale 0.5s ease-in-out);
 			}
-			
+
 			a,
 			> div{
 				.opacity(100);

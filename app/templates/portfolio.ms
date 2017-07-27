@@ -1,12 +1,12 @@
 <section id='content-portfolio'>
 	<header>
 		<h1>Portfolio</h1>
-		<h2>Quelques-unes de mes réalisations</h2>
-		
+		<h2>Quelques projets parmi tant d'autres</h2>
+
 		<section>
 			Dans le domaine des :
 			<ul>
-				<li>Extranet</li>
+				<li>CRM / ERP</li>
 				<li>FrameWork</li>
 				<li>CMS</li>
 				<li>Site Web</li>
