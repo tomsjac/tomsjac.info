@@ -18,6 +18,10 @@ J'ai voulu me lancer un défi, pourquoi ne pas faire un site ne respectant pas l
 contenu un cercle tout en essayant de garder une cohérence avec le thème graphique. 
 J’espère que le challenge est relevé et que cela vous plaira. 
 
+## Améliorations en réflexion
+
+- Passage sous Webpack pour les assets
+- Feuilles de style, passer de LESS à SASS
 
 ## Framework PHP
 
