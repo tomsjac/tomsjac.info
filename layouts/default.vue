@@ -10,11 +10,11 @@
     meta: [
       { name: 'description', content: 'My amazing site.' }
     ],
-    script: [
-     // { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
-    ],
     link: [
     //  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' }
+    ],
+    script: [
+      { hid: 'particles', src: 'https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js', defer: true }
     ],
     bodyAttrs: {
       class: 'test'
@@ -23,9 +23,8 @@
 </script>
 
 <template>
+  <PartialsLoader></PartialsLoader>
    <PartialsCursor></PartialsCursor>
-   <PartialsLoader></PartialsLoader>
-   <PartialsParticles></PartialsParticles>
 
    <!--
     <nav>
@@ -38,10 +37,12 @@
   -->
 
     <div class="content">
-       <slot />
+      <PartialsParticles></PartialsParticles>
+      <slot />
     </div>
 
     <div class="profile-image">
         <img src="/img/man.png" alt="profile">
     </div>
+
 </template>   

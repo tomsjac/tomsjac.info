@@ -29,7 +29,7 @@
 
 <script setup>
   import { ref } from 'vue'
-  import { state } from "/traits/menu"
+  import { state } from "/composables/menu"
 
   state.menu[0].isActive = true;
 

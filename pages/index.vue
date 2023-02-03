@@ -3,15 +3,11 @@
     
     <Resume></Resume>
 
-    <div>
-        <img src="/img/separator_mini.png" style="margin-top: 20px;" >                 
-    </div>
+    <img src="/img/separator_mini.png" class='separator' >                 
     
     <Skills></Skills>
 
-    <div>
-        <img src="/img/separator_mini.png" style="margin-top: 20px;" >                 
-    </div>
+    <img src="/img/separator_mini.png" class='separator' >                 
 
     <Hobbies></Hobbies>
 </template>  
