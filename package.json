@@ -9,9 +9,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "gsap": "^3.11.4",
     "nuxt": "^3.1.0",
+    "particlesjs": "2.2.2",
     "sass": "^1.57.1",
     "sass-loader": "^10.4.1",
-    "vue-i18n": "^8.28.2"
+    "vue-i18n": "^8.28.2",
+    "ismobilejs": "^1.1.1",
+    "vue3-popper": "^1.5.0"
   }
 }
