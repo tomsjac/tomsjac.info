@@ -7,28 +7,29 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+   import { menuModel } from  "@/composables/dataModel/menuModel"
+
     const iconList = [
         { 
             name: 'linkedin',
-            tooltip: 'Mon lien linkedin',
-
+            tooltip: {title : 'linkedin', content:'Mon lien linkedin'},
+            link: 'www.linkedin.fr'
         },
         { 
             name: 'resume',
-            tooltip: 'Cv PDF',
-
+            tooltip: {title : 'Cv', content:'<strong>Cv PDF</strong> A télécharger'},
+            link: 'www.cv.fr'
         },
         { 
             name: 'twitter',
-            tooltip: 'Twitter',
-
+            tooltip: {title : 'Twitter', content:'Compte qui me sert de R&D'},
+            link: 'www.twitter.fr'
         },
         { 
             name: 'github',
-            tooltip: 'Mon Github',
-
+            tooltip: {title : 'GitHub', content :'Toutes mes expériences, mes tests ....'},
+            link: 'www.github.fr'
         }
-    ];
-
+    ] as Array<menuModel>
 </script>

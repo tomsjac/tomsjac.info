@@ -1,4 +1,5 @@
 export interface menuModel {
     name: string,
-    tooltip: string
+    tooltip: Array<string>
+    link?: string
 }
