@@ -6,14 +6,17 @@
 
 /** FONTS */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
 
+/** Include */
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/animations';
 
 /** Default */
-
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 ::-webkit-scrollbar{
@@ -41,38 +44,36 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-/** Include */
-
-
 
 /** App */
 body{
-    position:relative;
-    display: block;
     user-select: none;
     height: auto;
-    width: 100%;
-    background: #171717;
-    height: 100vh;
     overflow: hidden;
-    animation: scale 1.5s ease;
+    width: 100%;
+    background-color: $backgound-color;
 }
 
 .content{
-    position: absolute;
+    //position: absolute;
     width: 100%;
     height: 100vh;
-    float: left;
+    //float: left;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: whitesmoke;
-    font-family: raleway;
-    font-weight: 400;
+    color: $text-content-color;
+    font-family: $font1;
+    //font-weight: 400;
     letter-spacing: 1px;
     flex-direction: column;
-    font-size: 50px;
+    font-size: 40px;
     z-index: 1;
+    animation: scale 1.5s ease;
+
+    .separator{
+        margin: 20px 0;
+    } 
 }
 
 .icons-box{
@@ -82,42 +83,34 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    font-family: poppins;
-    color: whitesmoke;
-    padding:10px;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    font-family: $font2;
+    color: $text-icon-color;
+    padding: 20px 10px;
     font-weight: 900;
 
     .icons-box-list{
-        opacity:.8;
         display: block;
         font-size: 20px;
-        font-family: raleway;
-        padding: 8px;
-        padding-top: 15px;
-        color: whitesmoke;
+        font-family: $font1;
+        padding: 15px 8px  8px  8px;
+        color: $text-icon-color;
         font-weight: 400;
     }
 }
 
 .profile-image{
-    float: right;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    width: 40%;   
-    height: 100vh;
-    
+    position: absolute;
+    top: 0;
+    right: 0;
+  
     img{
         height: 100vh;
-        float: right;
     }
 }
 
 /** Misc */
 .color{
-    color: #239251;
+    color: $text-color-secondary;
     transition: all .4s ease;
 }
 
@@ -125,80 +118,50 @@ body{
 /** Responsive */
 
 /*For devices with smaller width like mobile phone*/
-@media only screen and (max-width: 550px){
+@include media-max("phone") {
+    body{
+        background: red;
+    }
+
     .content{
-        height: 100vh;
-        width: 100%;
-        float: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: whitesmoke;
-        font-family: raleway;
         font-weight: 500;
         letter-spacing: 2px;
         font-size: 40px;
-    }
 
-    .about-box{
-        padding-left: 0px;
-        z-index: 2;
-        text-align: center;
+        .separator{
+            margin: 0 0;
+        }
     }
 
     .icons-box{
-        color: whitesmoke;
-        justify-content: center;
-        font-size: 18px;
-        font-family: poppins;
-        padding:10px;
-        font-weight: 900;
+        padding: 10px 5px;
     }
 
     .profile-image{
-        float: right;
-        height: auto;
-        width: 0%;   
+        display: none;
     }
 }
 
 
 /*for tabs and large phones*/
-@media all and (max-width: 1025px) and (min-width: 551px){
+@include media-between("phone", "desktop") {
+    
+    body{
+        background: green;
+    }
+
     .content{
-        height: 100vh;
-        width: 100%;
-        float: left;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: whitesmoke;
-        font-family: raleway;
         font-weight: 500;
         letter-spacing: 2px;
         font-size: 40px;
     }
 
-    .about-box{
-        padding-left: 0px;
-        z-index: 2;
-        text-align: center;
-    }
-
     .icons-box{
-        color: whitesmoke;
-        justify-content: center;
         font-size: 45px;
-        font-family: raleway;
-        padding:15px;
-        font-weight: 900;
+        padding: 15px;
     }
 
     .profile-image{
-        float: right;
-        height: auto;
-        width: 0%;   
+        width: 0;
     }
 }

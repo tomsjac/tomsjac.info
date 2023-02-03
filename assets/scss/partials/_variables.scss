@@ -1,0 +1,16 @@
+
+$backgound-color: #171717;
+$text-color: whitesmoke;
+$text-color-secondary:#239251;
+$text-content-color: $text-color;
+$text-icon-color: $text-color;
+$cursor-color-hover: $text-color;
+
+$font1: raleway, monospace;
+$font2: poppins, monospace;
+
+$breakpoints: (
+    "phone": 550px,
+    "desktop": 1025px,
+    "widescreen": 1440px
+);
