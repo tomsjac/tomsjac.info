@@ -13,9 +13,9 @@
       selector: '#particles-js-canvas-el',
       color: '#FFFFFF',
       connectParticles: true,
-      maxParticules: 130,
+      maxParticules: 80,
       speed: 0.4,
-      minDistance: 80,
+      minDistance: 40,
       // options for breakpoints
       responsive: [
         {

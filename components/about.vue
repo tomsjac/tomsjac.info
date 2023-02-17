@@ -36,7 +36,7 @@
     z-index: 2;
     text-align: center;
     height: auto;
-    padding-right: 60px;
+    //padding-right: 60px;
     width: auto;
 
     .firstline{
@@ -72,6 +72,16 @@
 @include media-max("phone") {   
     .about-box{
         padding-right: 0;
+
+        .firstline{
+          font-weight:500;
+          font-size: 50px;
+        }
+
+        .secondline{
+          font-size: 20px;
+        }
+
     }
 }
 

@@ -22,6 +22,7 @@
 <style lang="scss">
   /** Include */
   @import '/assets/scss/partials/variables';
+  @import '/assets/scss/partials/mixins';
 
   #loader{
       display: flex;
@@ -37,4 +38,14 @@
       font-size: 70px;
       width: 100%;
   }
+
+  /** Responsive */
+
+  /*For devices with smaller width like mobile phone*/
+  @include media-max("phone") {
+    #loader{
+      font-size: 40px;
+    }
+  }
+
 </style>
