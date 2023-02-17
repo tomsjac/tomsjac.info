@@ -30,7 +30,7 @@
       justify-content: center;
       flex-direction: column;
       height:100vh;
-      position: fixed;
+      position: absolute;
       z-index:100;
       font-family: $font2;
       background-color: #202020;
