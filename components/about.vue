@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <img src="/img/separator_header.png" class="separator"  alt="-">                 
+    <img src="/img/separator_header.png" class="separator_header"  alt="-">
 </template>
 
 <script setup>

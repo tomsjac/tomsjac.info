@@ -71,7 +71,7 @@ body{
     z-index: 1;
     animation: scale 1.5s ease;
 
-    .separator{
+    .separator, .separator_header{
         margin: 20px 0;
     } 
 }
@@ -129,8 +129,12 @@ body{
         letter-spacing: 2px;
         font-size: 40px;
 
-        .separator{
+        .separator, .separator_header{
             margin: 0 0;
+        }
+
+        .separator_header{
+            width:90%;
         }
     }
 
