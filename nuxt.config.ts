@@ -10,7 +10,8 @@ export default defineNuxtConfig({
       //transpile: ["vuetify"],
     },
     css: [
-      "@/assets/scss/style.scss"
+      "@/assets/scss/style.scss",
+      'animate.css/animate.min.css'
       //"@/assets/css/style.css"
     ],
     vite: {

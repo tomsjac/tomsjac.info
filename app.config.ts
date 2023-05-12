@@ -1,5 +1,5 @@
 export default defineAppConfig({  
-    title: 'Hello Nuxt',  
+    title: 'Hello, Welcome to tomsjac.info',  
     theme: {    
         dark: true,    
         colors: {      
