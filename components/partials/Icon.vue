@@ -3,6 +3,8 @@
     <img :src="'/img/icons/'+section+'/'+data.name+'.svg'"  v-bind:class = "(data.link)? 'svgIcon withLink' : 'svgIcon' "
          @click="target(data.link, true)"
          @dblclick="target(data.link, false)"
+         @mouseover="mouseOver($event, data.color, data.animation)"
+         @mouseleave="mouseDefault($event, data.color, data.animation)"
     >
 
     <template #content>
@@ -26,6 +28,28 @@
     defineProps<propsModel>()
 
     const displayMobile = (isMobile(window.navigator).phone || isMobile(window.navigator).tablet) as boolean;
+
+    function mouseOver(e:any, color:string, animation:string)
+    {
+        if (typeof animation !== 'undefined') {
+          e.target.classList.add('animate__animated', 'animate__'+animation)
+        }
+
+        if (typeof color !== 'undefined') {
+          //e.target.style.fill = color;
+        }
+    }
+     
+    function mouseDefault(e:any, color:string, animation:string)
+    {
+        if (typeof animation !== 'undefined') {
+          e.target.classList.remove('animate__animated', 'animate__'+animation)
+        }
+
+        if (typeof color !== 'undefined') {
+        //  e.target.style.color = '#FFF';
+        }
+    }
 
     function target(link:string, oneClick:boolean)
     {
@@ -56,7 +80,7 @@
 }
 
 .popper{
-    .popper-title{
+  .popper-title{
     font-size: 16px;
   }
   .popper-content{
@@ -73,5 +97,7 @@
       //fill-rule: evenodd;
       padding: 10px 15px;
       opacity:.8;
+     // animation-duration: 800ms;
+      animation-delay: 0.3s;
   }
 </style>

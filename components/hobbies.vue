@@ -13,23 +13,28 @@
   const iconList = [
       {
         name: 'movie',
-        tooltip: {title : 'Cinéma', content:'J\'aime Cinéma'},
+        tooltip: {title : 'Cinéma', content:'Une bonne scéane avec un son dolby Atmos et un grand écran'},
+        animation : 'tada'
       },
       {
         name: 'mountainbike',
-        tooltip: {title : 'Vtt', content:'J\'aime le velo'},
+        tooltip: {title : 'Vtt', content:'Idéal pour se vider l\'esprit et se faire plaisir en pleine nature'},
+        animation : 'tada'
       },
       {
         name: 'cook',
-        tooltip: {title : 'Cuisiner', content:'J\'aime la cuisine'},
+        tooltip: {title : 'Cuisiner', content:'Oui c\'est un pêcher de gourmandise, je l\'avoue'},
+        animation : 'tada'
       },
       {
         name: 'travel',
-        tooltip: {title : 'Voyage', content:'J\'aime la Voyager'},
+        tooltip: {title : 'Voyage', content:'Découvrir des nouvelles cultures, saveurs, lieux ...'},
+        animation : 'tada'
       },
       {
         name: 'lego',
-        tooltip: {title : 'Légo', content:'J\'aime les légos'},
+        tooltip: {title : 'Légo', content:'Qui n\'aime pas, il n\'y a pas d\'âge'},
+        animation : 'shakeY'
       },
   ] as Array<menuModel>
 </script>

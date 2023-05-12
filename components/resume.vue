@@ -13,23 +13,28 @@
     const iconList = [
         { 
             name: 'linkedin',
-            tooltip: {title : 'linkedin', content:'Mon lien linkedin'},
-            link: 'www.linkedin.fr'
+            tooltip: {title : 'Profil linkedin', content:'Retrouvez tous les informations sur mon parcours, mes formations, et mes attentes'},
+            link: 'http://fr.linkedin.com/in/tomsjac',
+            color: '#116be0',
+            animation : 'tada'
         },
         { 
             name: 'resume',
-            tooltip: {title : 'Cv', content:'<strong>Cv PDF</strong> A télécharger'},
-            link: 'www.cv.fr'
+            tooltip: {title : 'Curriculum vitae', content:'Gardez au chaud, ce beau PDF'},
+            link: 'www.cv.fr',
+            animation : 'pulse'
         },
         { 
             name: 'twitter',
-            tooltip: {title : 'Twitter', content:'Compte qui me sert de R&D'},
-            link: 'www.twitter.fr'
+            tooltip: {title : 'Twitter', content:'Compte Twitter pour me tenir à jour des nouveautés (Dev, Tech, Actualité)'},
+            link: 'https://twitter.com/tomsjac',
+            animation : 'jello'
         },
         { 
             name: 'github',
-            tooltip: {title : 'GitHub', content :'Toutes mes expériences, mes tests ....'},
-            link: 'www.github.fr'
+            tooltip: {title : 'GitHub', content :'Mon dépot public pour mes expériences, mes tests ...'},
+            link: 'www.github.fr',
+            animation : 'rubberBand'
         }
     ] as Array<menuModel>
 </script>
