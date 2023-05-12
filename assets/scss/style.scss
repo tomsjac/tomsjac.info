@@ -96,6 +96,10 @@ body{
         color: $text-icon-color;
         font-weight: 400;
     }
+    
+    .withLink{
+        cursor: pointer;
+    }
 }
 
 .profile-image{
@@ -120,7 +124,8 @@ body{
 /*For devices with smaller width like mobile phone*/
 @include media-max("phone") {
     body{
-      //  background: red;
+      //background: red;
+      overflow-y: auto !important;
     }
 
     .content{
