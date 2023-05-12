@@ -2,7 +2,7 @@
   import { state, menuTrait } from "../composables/menu"
 
   useHead({
-    title: 'My App 2',
+    title: 'Jacquey Thomas - Chef de projet - Lead Dev - Dev',
     // or, instead:
     // titleTemplate: (title) => `My App - ${title}`,
     charset: 'utf-8',
@@ -13,10 +13,10 @@
     //  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' }
     ],
     script: [
-      { hid: 'particles', src: 'https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js', defer: true }
+       { hid: 'particles', src: 'https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js', defer: true }
     ],
     bodyAttrs: {
-      class: 'test'
+      class: 'tomsjac'
     }
   })
 </script>
