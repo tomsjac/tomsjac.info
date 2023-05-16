@@ -6,7 +6,7 @@
 
 
 <script setup>
-  import "~/node_modules/particlesjs/dist/particles";
+  import {Particles} from "@/composables/particules.js";
 
   onMounted(() => {
     Particles.init({
