@@ -1,11 +1,20 @@
 <template>
   <Popper hover placement="top">
+  <!--  
     <img :src="'/img/icons/'+section+'/'+data.name+'.svg'"  v-bind:class = "(data.link)? 'svgIcon withLink' : 'svgIcon' "
          @click="target(data.link, true)"
          @dblclick="target(data.link, false)"
          @mouseover="mouseOver($event, data.color, data.animation)"
          @mouseleave="mouseDefault($event, data.color, data.animation)"
     >
+  -->
+
+    <inline-svg :src="'/img/icons/'+section+'/'+data.name+'.svg'" v-bind:class = "(data.link)? 'svgIcon withLink' : 'svgIcon'"  width="60"  height="60" 
+         @click="target(data.link, true)"
+         @dblclick="target(data.link, false)"
+         @mouseover="mouseOver($event, data.color, data.animation)"
+         @mouseleave="mouseDefault($event, data.color, data.animation)"
+    />
 
     <template #content>
         <div class='popper-title' v-html="data.tooltip.title"></div>
@@ -16,9 +25,13 @@
 </template>
 
 <script setup lang="ts">
+    import Vue from 'vue';
     import { menuModel } from  "@/composables/dataModel/menuModel"
     import Popper from "~/node_modules/vue3-popper";
     import isMobile from '~/node_modules/ismobilejs';
+    import InlineSvg from '~/node_modules/vue-inline-svg';
+  
+   // Vue.use(InlineSvgPlugin);
 
     interface propsModel {
         data: menuModel,
@@ -29,7 +42,7 @@
 
     const displayMobile = (isMobile(window.navigator).phone || isMobile(window.navigator).tablet) as boolean;
 
-    function mouseOver(e:any, color:string, animation:string)
+    function mouseOver(e:Event, color:string, animation:string)
     {
         if (typeof animation !== 'undefined') {
           e.target.classList.add('animate__animated', 'animate__'+animation)
@@ -37,10 +50,12 @@
 
         if (typeof color !== 'undefined') {
           //e.target.style.fill = color;
+
+          //e.target.style.filter = "invert(0.5) sepia(1) saturate(5) hue-rotate(175deg)";
         }
     }
      
-    function mouseDefault(e:any, color:string, animation:string)
+    function mouseDefault(e:Event, color:string, animation:string)
     {
         if (typeof animation !== 'undefined') {
           e.target.classList.remove('animate__animated', 'animate__'+animation)
