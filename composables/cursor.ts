@@ -1,9 +1,29 @@
 import gsap from "~/node_modules/gsap";
 
-export const cursor = (element: Element) => {
-    let pointer = element;
+export const cursor = () => {
+    let pointer = document.querySelector('#cursor');
 
-    const cursormover = (e) => {
+    /*
+    const applyForElement = (item) => {
+        item.forEach((item) => {
+            
+            item.addEventListener("mouseover", (e) => {
+              if(e.target.classList.contains('withLink')){
+                  cursor().cursorHoverLink(e);
+              }else{
+                  cursor().cursorHover(e);
+              }
+            })
+      
+            item.addEventListener("mouseout", (e) => {
+                cursor().cursorDefault(e);
+            })
+        });
+    }
+    */
+
+
+    const cursorMover = (e) => {
         gsap.to( pointer, {
             x : e.clientX ,
             y : e.clientY,
@@ -11,14 +31,14 @@ export const cursor = (element: Element) => {
         })
     };
 
-    const cursorhover = (e) => {
+    const cursorHover = (e) => {
         gsap.to( pointer,{
             scale:1.2,
             opacity:1
         })
     };
 
-    const cursorhoverlink = (e) => {
+    const cursorHoverLink = (e) => {
         gsap.to( pointer,{
             scale:1.2,
             opacity:1,
@@ -27,7 +47,7 @@ export const cursor = (element: Element) => {
     };
 
 
-    const cursor = (e) => {
+    const cursorDefault = (e) => {
         gsap.to( pointer, {
             scale:1,
             opacity:.6,
@@ -36,9 +56,10 @@ export const cursor = (element: Element) => {
     };
 
     return {
-        cursormover,
-        cursorhover,
-        cursorhoverlink,
-        cursor,
+        //applyForElement,
+        cursorMover,
+        cursorHover,
+        cursorHoverLink,
+        cursorDefault,
     }
 }
