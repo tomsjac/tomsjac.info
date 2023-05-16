@@ -19,4 +19,7 @@ export default defineNuxtConfig({
         "process.env.DEBUG": true,
       },
     },
+    experimental: {
+      payloadExtraction: true
+    }
 })
