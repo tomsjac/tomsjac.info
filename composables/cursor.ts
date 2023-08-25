@@ -1,27 +1,10 @@
+/**
+ * Declaration of effects on the cursor
+ */
 import gsap from "~/node_modules/gsap";
 
 export const cursor = () => {
     let pointer = document.querySelector('#cursor');
-
-    /*
-    const applyForElement = (item) => {
-        item.forEach((item) => {
-            
-            item.addEventListener("mouseover", (e) => {
-              if(e.target.classList.contains('withLink')){
-                  cursor().cursorHoverLink(e);
-              }else{
-                  cursor().cursorHover(e);
-              }
-            })
-      
-            item.addEventListener("mouseout", (e) => {
-                cursor().cursorDefault(e);
-            })
-        });
-    }
-    */
-
 
     const cursorMover = (e) => {
         gsap.to( pointer, {

@@ -1,3 +1,6 @@
+/**
+ * Text rotation management
+ */
 export const txtRotate = () => {
    
     let toRotate = [] as Array<string>;
