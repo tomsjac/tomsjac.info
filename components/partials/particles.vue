@@ -1,3 +1,6 @@
+<!--
+Particle management and display (Package)
+-->
 <template>
   <div id="particles">
     <canvas id="particles-js-canvas-el"></canvas>
@@ -43,6 +46,3 @@
     opacity: 0.8;
   }
 </style>
-
-
-

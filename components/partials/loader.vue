@@ -1,9 +1,11 @@
+<!--
+Application loading page
+-->
 <template>
     <div id="loader">
-        <span class="color">Thomas</span>Jacquey 
+        <span class="color">{{ $t('section.about.firstname') }}</span>{{ $t('section.about.lastname') }}
     </div>
 </template>
-
 
 <script setup lang="ts">
   import gsap from "~/node_modules/gsap";
@@ -16,7 +18,6 @@
     }, 1000);
   })
 </script>
-
 
 
 <style lang="scss">

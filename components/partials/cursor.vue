@@ -9,15 +9,16 @@ import {cursor} from "@/composables/cursor";
 onMounted(() => {
     const pointer = document.querySelector('#cursor');
 
-    //All
+    //Cursor change
     window.addEventListener('mousemove', (e) => {
         cursor().cursorMover(e);
     });
 
+    //The cursor reacts to certain items in passing
     const items = document.querySelectorAll('.svgIcon');
     items.forEach((item) => {
         item.addEventListener("mouseenter", (e) => {
-            console.log(e.target.classList);
+            //The reaction is different with or without a link
             if (e.target.classList.contains('withLink')) {
                 cursor().cursorHoverLink(e);
             } else {
@@ -25,8 +26,8 @@ onMounted(() => {
             }
         })
 
+        //Restore by default
         item.addEventListener("mouseleave", (e) => {
-            console.log('out');
             cursor().cursorDefault(e);
         })
     });

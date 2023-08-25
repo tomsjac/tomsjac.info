@@ -1,13 +1,8 @@
+<!--
+Icon management and display
+-->
 <template>
     <Popper hover placement="top">
-        <!--
-          <img :src="'/img/icons/'+section+'/'+data.name+'.svg'"  v-bind:class = "(data.link)? 'svgIcon withLink' : 'svgIcon' "
-               @click="target(data.link, true)"
-               @dblclick="target(data.link, false)"
-               @mouseover="mouseOver($event, data.color, data.animation)"
-               @mouseleave="mouseDefault($event, data.color, data.animation)"
-          >
-        -->
         <div v-bind:class="(data.link)? 'svgIcon withLink' : 'svgIcon'"
              @click="target(data.link, true)"
              @dblclick="target(data.link, false)"
@@ -18,7 +13,7 @@
             />
         </div>
 
-
+        <!-- Tooltips for icon-->
         <template #content>
             <div class='popper-title' v-html="data.tooltip.title"></div>
             <div class='popper-content' v-html="data.tooltip.content"></div>
@@ -37,50 +32,71 @@
         data: menuModel,
         section: string
     }
-
     defineProps<propsModel>()
 
+    //Detection env
     const displayMobile = (isMobile(window.navigator).phone || isMobile(window.navigator).tablet) as boolean;
 
+    /**
+     * When the cursor passes over the icon
+     * @param e event mouse
+     * @param color
+     * @param animation icon animation
+     */
     function mouseOver(e: Event, color: string, animation: string) {
-        if (e.target.tagName !== 'svg') {
-            return;
-        }
-
-        if (typeof animation !== 'undefined') {
-            e.target.classList.add('animate__animated', 'animate__' + animation)
-        }
-
-        if (typeof color !== 'undefined') {
-            e.target.style.fill = color;
-        }
+        _mouseIconEvent(e, 'add', animation, color);
     }
 
+    /**
+     * Default return of the icon
+     * @param e event mouse
+     * @param color
+     * @param animation icon animation
+     */
     function mouseDefault(e: Event, color: string, animation: string) {
+        _mouseIconEvent(e, 'remove', animation, '#FFF');
+    }
 
+    /**
+     * Mouse over icon management
+     * @param e event mouse
+     * @param action 'add' or 'remove'
+     * @param animation icon animation
+     * @param color
+     */
+    function _mouseIconEvent(e: Event, action: string,  animation: string, color: string){
         if (e.target.tagName !== 'svg') {
-            return;
+          return;
         }
 
         if (typeof animation !== 'undefined') {
-            e.target.classList.remove('animate__animated', 'animate__' + animation)
+            if(action === 'add'){
+              e.target.classList.add('animate__animated', 'animate__' + animation)
+            }else{
+              e.target.classList.remove('animate__animated', 'animate__' + animation)
+            }
         }
 
         if (typeof color !== 'undefined') {
-            e.target.style.fill = '#FFF';
+          e.target.style.fill = color;
         }
     }
 
-
+    /**
+     * When you click on the icon
+     * @param link
+     * @param oneClick
+     */
     function target(link: string, oneClick: boolean) {
         if (typeof link === 'undefined') {
             return
         }
 
+        //Depending on the device, either click or double-click to open the link
         if (oneClick && (!isMobile(window.navigator).phone && !isMobile(window.navigator).tablet)) {
-            alert('Ouverture du lien : ' + link);
+            window.open(link);
         } else if (!oneClick && (isMobile(window.navigator).phone || isMobile(window.navigator).tablet)) {
-            alert('Ouverture du lien : ' + link);
+            window.open(link);
         }
     }
 </script>
@@ -116,8 +132,6 @@
 .svgIcon {
   width: 60px;
   height: 60px;
-  //fill: red !important;
-  //fill-rule: evenodd;
   padding: 10px 15px;
   opacity: .8;
   // animation-duration: 800ms;
