@@ -9,6 +9,9 @@ export default defineNuxtConfig({
     build: {
       //transpile: ["vuetify"],
     },
+    modules: [
+        '@nuxtjs/i18n',
+    ],
     css: [
       "@/assets/scss/style.scss",
       'animate.css/animate.min.css'
@@ -21,5 +24,8 @@ export default defineNuxtConfig({
     },
     experimental: {
       payloadExtraction: true
+    },
+    i18n: {
+        vueI18n: './i18n.config.ts' // if you are using custom path, default
     }
 })
