@@ -50,6 +50,9 @@ export default defineI18nConfig(() => ({
                         'lego': {title:'Légo', desc:'Parce qu\'aimer les petites briques, c\'est pour les esprits jeunes de tous âges !'},
                     }
                 },
+            },
+            tooltip: {
+                mobile: 'Veuillez double-cliquer pour accéder au lien'
             }
         }
     }

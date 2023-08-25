@@ -17,7 +17,7 @@ Icon management and display
         <template #content>
             <div class='popper-title' v-html="data.tooltip.title"></div>
             <div class='popper-content' v-html="data.tooltip.content"></div>
-            <div class='popper-doubleClk' v-if="displayMobile && data.link">Mobile</div>
+            <div class='popper-doubleClk' v-if="displayMobile && data.link">{{ $t('tooltip.mobile') }}</div>
         </template>
     </Popper>
 </template>
@@ -126,6 +126,7 @@ Icon management and display
 
   .popper-doubleClk {
     font-size: 10px;
+    margin-top: 5px;
   }
 }
 
