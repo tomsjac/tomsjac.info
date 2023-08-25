@@ -1,10 +1,13 @@
+<!--
+Short presentation
+-->
 <template>
     <div class="about-box">
-        <div class="firstline"><span class="color">Thomas </span>Jacquey</div>
+        <div class="firstline"><span class="color">{{ $t('section.about.firstname') }}</span>&nbsp;{{ $t('section.about.lastname') }}</div>
         <div class="secondline">
             Je suis
             <span id='txt-rotate' class="color" data-period="1200">
-                <span class="wrap"> Moi.</span>
+                <span class="wrap"> ### </span>
             </span>
             <span class="slash">|</span>
         </div>
@@ -15,10 +18,11 @@
 
 <script setup>
     import {txtRotate} from "@/composables/txtRotate";
-
-    const contentTextRotate = ['Lead dev.' ,  'Développeur.', 'Chef de projet.'];
+    const { t } = useI18n();
+    const contentTextRotate = [t('section.about.jobs.lead'), t('section.about.jobs.dev'), t('section.about.jobs.projectManager')];
 
     onMounted(() => {
+        //Init text rotate (jobs)
         var element = document.getElementById('txt-rotate');
         var period = element.getAttribute('data-period');
         txtRotate().start(element, contentTextRotate, period);
