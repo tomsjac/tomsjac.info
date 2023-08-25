@@ -9,14 +9,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/i18n": "^8.0.0-rc.3",
     "animate.css": "^4.1.1",
-    "gsap": "^3.11.4",
+    "gsap": "^3.12.2",
     "ismobilejs": "^1.1.1",
-    "nuxt": "^3.1.0",
-    "sass": "^1.57.1",
-    "sass-loader": "^10.4.1",
-    "vue-i18n": "^8.28.2",
-    "vue3-popper": "^1.5.0",
-    "vue-inline-svg": "^3.1.2"
+    "nuxt": "^3.6.5",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "vue-inline-svg": "^3.1.2",
+    "vue3-popper": "^1.5.0"
   }
 }
