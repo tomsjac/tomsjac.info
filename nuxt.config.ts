@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     css: [
       "@/assets/scss/style.scss",
       'animate.css/animate.min.css'
-      //"@/assets/css/style.css"
     ],
     vite: {
       define: {

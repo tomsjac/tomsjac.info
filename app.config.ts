@@ -1,5 +1,5 @@
 export default defineAppConfig({  
-    title: 'Hello, Welcome to tomsjac.info',  
+    title: 'Tomsjac.info resume',
     theme: {    
         dark: true,    
         colors: {      
