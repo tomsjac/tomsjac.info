@@ -1,6 +1,6 @@
 <template>
     <div class="icons-box">
-        Pour me vider  <span class="color">l'esprit</span>
+        {{ $t('section.hobbie.title') }} <span class="color">{{ $t('section.hobbie.titleImportantItem') }}</span>
         <span class="icons-box-list">
             <PartialsIcon  v-for="icon in iconList" :data="icon" section="hobby"></PartialsIcon>
         </span>
@@ -9,35 +9,37 @@
 
 <script setup lang="ts">
   import { menuModel } from  "@/composables/dataModel/menuModel"
+  const { t } = useI18n();
 
+  // List of information to display as icons
   const iconList = [
       {
         name: 'movie',
-        tooltip: {title : 'Cinéma', content:'Une bonne scéane avec un son dolby Atmos et un écran géant'},
+        tooltip: {title : t('section.hobbie.icons.movie.title'), content: t('section.hobbie.icons.movie.desc')},
         color: '#E43100',
         animation : 'tada'
       },
       {
         name: 'mountainbike',
-        tooltip: {title : 'Vtt', content:'Idéal pour se vider l\'esprit et se faire plaisir en pleine nature'},
+        tooltip: {title : t('section.hobbie.icons.mountainbike.title'), content: t('section.hobbie.icons.mountainbike.desc')},
         color: '#5D5C5A',
         animation : 'tada'
       },
       {
         name: 'cook',
-        tooltip: {title : 'Cuisiner', content:'Oui c\'est un pêcher de gourmandise, je l\'avoue'},
+        tooltip: {title : t('section.hobbie.icons.cook.title'), content: t('section.hobbie.icons.cook.desc')},
         color: '#D8B063',
         animation : 'tada'
       },
       {
         name: 'travel',
-        tooltip: {title : 'Voyage', content:'Découvrir des nouvelles cultures, saveurs, lieux ...'},
+        tooltip: {title : t('section.hobbie.icons.travel.title'), content: t('section.hobbie.icons.travel.desc')},
         color: '#83CFD6',
         animation : 'tada'
       },
       {
         name: 'lego',
-        tooltip: {title : 'Légo', content:'Qui n\'aime pas, il n\'y a pas d\'âge'},
+        tooltip: {title : t('section.hobbie.icons.lego.title'), content: t('section.hobbie.icons.lego.desc')},
         color: '#F0D864',
         animation : 'shakeY'
       },

@@ -39,6 +39,17 @@ export default defineI18nConfig(() => ({
                         'ninja': {title:'Ninja', desc:'Adaptable en toute situation, toujours en quête de solutions et résolument en faveur de l\'apprentissage.'},
                     }
                 },
+                hobbie: {
+                    title: 'Pour me vider',
+                    titleImportantItem: 'l\'esprit',
+                    icons: {
+                        'movie': {title:'Cinéma', desc:'Passionné par les films et les séries, j\'adore m\'immerger dans une scène captivante avec un son Dolby Atmos et un écran géant.'},
+                        'mountainbike': {title:'VTT', desc:'Idéal pour se vider l\'esprit et se faire plaisir en pleine nature'},
+                        'cook': {title:'Cuisiner', desc:'Je ne peux le nier, savourer de délicieuses créations culinaires est un plaisir coupable.'},
+                        'travel': {title:'Voyage', desc:'Explorer de nouvelles cultures, goûter des saveurs inédites et découvrir des recoins insolites du globe.'},
+                        'lego': {title:'Légo', desc:'Parce qu\'aimer les petites briques, c\'est pour les esprits jeunes de tous âges !'},
+                    }
+                },
             }
         }
     }
