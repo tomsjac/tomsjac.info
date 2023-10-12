@@ -22,6 +22,9 @@
     script: [
     //   { hid: 'particles', src: '', defer: true }
     ],
+    htmlAttrs: {
+      lang: 'fr'
+    },
     bodyAttrs: {
       class: 'tomsjac'
     }
