@@ -8,12 +8,12 @@
     <!-- Web link about me -->
     <Resume></Resume>
 
-    <img src="/img/separator_mini.png" class='separator' >                 
+    <img src="/img/separator_mini.png" class='separator' alt="-">
 
     <!-- My skills  -->
     <Skills></Skills>
 
-    <img src="/img/separator_mini.png" class='separator' >
+    <img src="/img/separator_mini.png" class='separator' alt="-">
 
     <!-- My hobbies  -->
     <Hobbies></Hobbies>
