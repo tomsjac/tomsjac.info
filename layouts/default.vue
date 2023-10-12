@@ -16,6 +16,7 @@
       { property:  'og:url', 'content':  'https://www.tomsjac.info',},
     ],
     link: [
+        { rel: 'canonical', href: 'https://www.tomsjac.info' },
         { rel: 'icon', type: 'image/x-icon', href: './img/favicons/favicon-32x32.png' }
     //  { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' }
     ],
