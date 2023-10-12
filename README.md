@@ -57,14 +57,6 @@ http://localhost:3000
 - Language de documentation : [![FR][I18nFr-logo]][I18nFr-url]
 
 
-### Commandes
-
-###### A définir
-
-```bash
-
-```
-
 ----------------------
 <!-- CONTACT -->
 ## Contact
