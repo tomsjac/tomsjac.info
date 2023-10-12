@@ -36,7 +36,7 @@ Particle management and display (Package)
 <style lang="scss">
   #particles {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
     height: 100%;
     width: 100vw;
