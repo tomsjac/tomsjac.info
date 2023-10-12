@@ -3,7 +3,7 @@ Short presentation
 -->
 <template>
     <div class="about-box">
-        <div class="firstline"><span class="color">{{ $t('section.about.firstname') }}</span> {{ $t('section.about.lastname') }}</div>
+        <h1 class="firstline"><span class="color">{{ $t('section.about.firstname') }}</span> {{ $t('section.about.lastname') }}</h1>
         <div class="secondline">
             Je suis
             <span id='txt-rotate' class="color" data-period="1200">
