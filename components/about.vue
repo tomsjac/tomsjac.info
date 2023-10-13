@@ -4,13 +4,13 @@ Short presentation
 <template>
     <div class="about-box">
         <h1 class="firstline"><span class="color">{{ $t('section.about.firstname') }}</span> {{ $t('section.about.lastname') }}</h1>
-        <div class="secondline">
+        <h2 class="secondline">
             Je suis
             <span id='txt-rotate' class="color" data-period="1200">
-                <span class="wrap"> ### </span>
+                <span class="wrap"> {{ $t('section.about.jobs.projectManager') }}, {{ $t('section.about.jobs.lead') }}, {{ $t('section.about.jobs.dev') }} </span>
             </span>
             <span class="slash">|</span>
-        </div>
+        </h2>
     </div>
 
     <img src="/img/separator_header.png" class="separator_header"  alt="-">
@@ -19,7 +19,7 @@ Short presentation
 <script setup>
     import {txtRotate} from "@/composables/txtRotate";
     const { t } = useI18n();
-    const contentTextRotate = [t('section.about.jobs.lead'), t('section.about.jobs.dev'), t('section.about.jobs.projectManager')];
+    const contentTextRotate = [t('section.about.jobs.projectManager'), t('section.about.jobs.lead'), t('section.about.jobs.dev')];
 
     onMounted(() => {
         //Init text rotate (jobs)
