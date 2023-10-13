@@ -1,6 +1,8 @@
 <template>
     <div class="icons-box">
-        {{ $t('section.skill.title') }} <span class="color">{{ $t('section.skill.titleImportantItem') }}</span>
+        <h3>
+          {{ $t('section.skill.title') }} <span class="color">{{ $t('section.skill.titleImportantItem') }}</span>
+        </h3>
         <span class="icons-box-list">
             <PartialsIcon  v-for="icon in iconList" :data="icon" section="skill"></PartialsIcon>
         </span>
