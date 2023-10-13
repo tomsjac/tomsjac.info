@@ -25,7 +25,7 @@
         { 
             name: 'resume',
             tooltip: {title : t('section.resume.icons.resume.title'), content: t('section.resume.icons.resume.desc')},
-            link: 'https://github.com/tomsjac/resume.tomsjac.info/blob/089692182e36049bc97a3ae134852166bb779cf7/Thomas_JACQUEY_Resume.pdf',
+            link: 'https://resume.tomsjac.info',
             color: '#F48225',
             animation : 'pulse'
         },
