@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://tomsjac.info/
+Sitemap: https://www.tomsjac.info/sitemap.xml
