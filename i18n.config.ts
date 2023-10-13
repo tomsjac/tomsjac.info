@@ -7,7 +7,7 @@ export default defineI18nConfig(() => ({
             layout: {
                 title: 'Jacquey Thomas - Chef de projet - Lead Dev - Dev',
                 seo: {
-                    description: 'Expertise en Extranet, Intranet et Applications Spécifiques | Création, Développement et Intégration de Projets Web de Pointe',
+                    description: 'Lead développeur PHP spécialisé dans les Extranets, Intranets et Applications Spécifiques. Expert en création, développement et intégration de projets web avancés. Apporte une approche stratégique et technique de pointe pour concrétiser vos idées.',
                     keywords:'développement d\'applications web, programmation backend, gestion de projets web, expertise en développement, solutions personnalisées, technologies web avancées, gestionnaire de projet technique, architecture de site web, intégration de technologies web, applications spécifiques aux besoins, création d\'Extranet, conception d\'Intranet, applications pour entreprise, solutions web sur mesure, développeur senior, expert en technologies web, stratégies de développement web, optimisation de performance web, intégration front-end et back-end',
                     author: 'Tomsjac',
                     ogTitle : 'Portfolio de Thomas Jacquey - Lead développeur PHP'
