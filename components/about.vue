@@ -31,10 +31,9 @@ Short presentation
 
 <style lang="scss">
 
-/** Include */
-@import '/assets/scss/partials/variables';
-@import '/assets/scss/partials/mixins';
-@import '/assets/scss/partials/animations';
+/** Include (la keyframe animateslash est émise globalement via style.scss) */
+@use '/assets/scss/partials/variables' as *;
+@use '/assets/scss/partials/mixins' as *;
 
 .about-box{
     z-index: 2;

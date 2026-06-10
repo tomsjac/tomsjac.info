@@ -37,7 +37,7 @@ onMounted(() => {
 
 <style lang="scss">
 /** Include */
-@import '/assets/scss/partials/variables';
+@use '/assets/scss/partials/variables' as *;
 
 #cursor {
   height: 50px;
