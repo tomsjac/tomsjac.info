@@ -6,7 +6,7 @@ Short presentation
         <h1 class="firstline"><span class="color">{{ $t('section.about.firstname') }}</span> {{ $t('section.about.lastname') }}</h1>
         <h2 class="secondline">
             Je suis
-            <span id='txt-rotate' class="color" data-period="1200">
+            <span ref="txtRotateEl" id='txt-rotate' class="color">
                 <span class="wrap"> {{ $t('section.about.jobs.projectManager') }}, {{ $t('section.about.jobs.lead') }}, {{ $t('section.about.jobs.dev') }} </span>
             </span>
             <span class="slash">|</span>
@@ -18,14 +18,16 @@ Short presentation
 
 <script setup>
     import {txtRotate} from "@/composables/txtRotate";
+
     const { t } = useI18n();
+    const txtRotateEl = ref(null);
     const contentTextRotate = [t('section.about.jobs.projectManager'), t('section.about.jobs.lead'), t('section.about.jobs.dev')];
 
     onMounted(() => {
-        //Init text rotate (jobs)
-        var element = document.getElementById('txt-rotate');
-        var period = element.getAttribute('data-period');
-        txtRotate().start(element, contentTextRotate, period);
+        // Init text rotate (jobs)
+        if (txtRotateEl.value) {
+            txtRotate().start(txtRotateEl.value, contentTextRotate, '1200');
+        }
     })
 </script>
 
