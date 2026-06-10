@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-  import { menuModel } from  "@/composables/dataModel/menuModel"
+  import type { menuModel } from  "@/composables/dataModel/menuModel"
   const { t } = useI18n();
 
   // List of information to display as icons

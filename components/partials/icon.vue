@@ -23,7 +23,7 @@ Icon management and display
 </template>
 
 <script setup lang="ts">
-    import {menuModel} from "@/composables/dataModel/menuModel"
+    import type { menuModel } from "@/composables/dataModel/menuModel"
     import Popper from "~/node_modules/vue3-popper";
     import isMobile from '~/node_modules/ismobilejs';
     import InlineSvg from '~/node_modules/vue-inline-svg';
