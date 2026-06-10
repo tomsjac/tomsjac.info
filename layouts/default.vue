@@ -12,7 +12,7 @@
       { name: 'language', content: locale.value},
       { name: 'robots', content: 'index, follow'},
       { property:  'og:title', 'content':  t('layout.seo.ogTitle')},
-      { property:  'og:image', 'content':  './img/favicons/favicon-196x196.png',},
+      { property:  'og:image', 'content':  'https://www.tomsjac.info/img/favicons/favicon-196x196.png',},
       { property:  'og:url', 'content':  'https://www.tomsjac.info',},
     ],
     link: [
