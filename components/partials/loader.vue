@@ -22,8 +22,8 @@ Application loading page
 
 <style lang="scss">
   /** Include */
-  @import '/assets/scss/partials/variables';
-  @import '/assets/scss/partials/mixins';
+  @use '/assets/scss/partials/variables' as *;
+  @use '/assets/scss/partials/mixins' as *;
 
   #loader{
       display: flex;

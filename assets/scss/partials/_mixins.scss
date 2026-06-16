@@ -1,9 +1,11 @@
+@use 'sass:map';
+@use 'variables' as *;
 
 /**  Media Responsive */
 /* from… */
 @mixin media-min($_key) {
 @media screen
-    and (min-width: map-get($breakpoints, $_key)) {
+    and (min-width: map.get($breakpoints, $_key)) {
         @content
     }
 }
@@ -11,7 +13,7 @@
 /* to… */
 @mixin media-max($_key) {
 @media screen
-    and (max-width: map-get($breakpoints, $_key)) {
+    and (max-width: map.get($breakpoints, $_key)) {
         @content
     }
 }
@@ -19,8 +21,8 @@
 /* from… to… */
 @mixin media-between($_keymin, $_keymax) {
 @media screen
-    and (min-width: (map-get($breakpoints, $_keymin) + 1) )
-    and (max-width: map-get($breakpoints, $_keymax)) {
+    and (min-width: (map.get($breakpoints, $_keymin) + 1) )
+    and (max-width: map.get($breakpoints, $_keymax)) {
         @content
     }
 }

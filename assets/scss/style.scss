@@ -4,14 +4,10 @@
   * Version: v1
   */
 
-/** FONTS */
-@import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:300&display=swap');
-
-/** Include */
-@import 'partials/variables';
-@import 'partials/mixins';
-@import 'partials/animations';
+/** Include (les polices Google sont chargées via app.head dans nuxt.config) */
+@use 'partials/variables' as *;
+@use 'partials/mixins' as *;
+@use 'partials/animations';
 
 /** Default */
 *{
