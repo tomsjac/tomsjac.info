@@ -59,6 +59,31 @@ inattendus, afin d’obliger à revoir la compatibilité lors d’une mise à jo
 Il peut être retiré avec l’override lorsque DevTools stable adoptera la v4.
 
 ----------------------
+## Correctifs locaux des alertes élevées
+
+Les 13 alertes élevées de l’audit remontent à deux dépendances indirectes dont
+les dernières versions npm sont toujours signalées. `npm ci` exécute également
+`scripts/patch-security-dependencies.mjs` pour appliquer ces correctifs ciblés :
+
+- `braces` 3.0.3 ([GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm)) : limite de profondeur de 128 dans le parseur et les trois parcours récursifs de l’AST, y compris lorsque l’appelant fournit directement un AST. Les motifs excessivement imbriqués lèvent une `SyntaxError` au lieu d’épuiser la pile.
+- `node-forge` 1.4.0 ([GHSA-86w9-cpqp-85rv](https://github.com/advisories/GHSA-86w9-cpqp-85rv)) : reprise du contrôle du nombre d’éléments ASN.1 proposé dans [forge#1152](https://github.com/digitalbazaar/forge/pull/1152), commit `ceba34402e329f0365134f23fe19898756527d65`. Les éléments superflus dans `DigestAlgorithm` sont rejetés ; les signatures valides avec ou sans paramètres NULL restent acceptées.
+
+```bash
+npm run test:security
+```
+
+Les six tests couvrent les motifs normaux, les entrées profondément imbriquées,
+les AST fournis directement, les signatures valides, les messages modifiés et
+les éléments ASN.1 superflus. Quatre tests échouent sur les paquets non corrigés.
+Les scripts vérifient les versions et les fragments attendus, sont idempotents
+et échouent si une mise à jour exige de revoir le correctif.
+
+**L’audit npm reste à 13 alertes élevées et zéro critique.** Il ne prend pas en
+compte les modifications locales des sources installées. Aucun avertissement
+n’est masqué et aucune version n’est falsifiée. Ces correctifs devront être
+retirés ou réévalués lorsque des versions corrigées seront publiées en amont.
+
+----------------------
 ## Tests de traduction
 
 Les tests Playwright vérifient les traductions françaises et anglaises, les titres

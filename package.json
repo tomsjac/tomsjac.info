@@ -6,8 +6,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "node scripts/patch-devtools.mjs && nuxt prepare",
-    "test:i18n": "playwright test"
+    "postinstall": "node scripts/patch-devtools.mjs && node scripts/patch-security-dependencies.mjs && nuxt prepare",
+    "test:i18n": "playwright test",
+    "test:security": "node --test tests/security.test.mjs"
   },
   "devDependencies": {
     "@nuxtjs/i18n": "^10.6.0",
