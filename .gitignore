@@ -9,3 +9,6 @@ node_modules
 .idea
 dist
 TODO.me
+# Browser test outputs
+playwright-report
+test-results

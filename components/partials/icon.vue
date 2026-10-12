@@ -24,9 +24,9 @@ Icon management and display
 
 <script setup lang="ts">
     import type { menuModel } from "@/composables/dataModel/menuModel"
-    import Popper from "~/node_modules/vue3-popper";
-    import isMobile from '~/node_modules/ismobilejs';
-    import InlineSvg from '~/node_modules/vue-inline-svg';
+    import Popper from "vue3-popper";
+    import isMobile from 'ismobilejs';
+    import InlineSvg from 'vue-inline-svg';
 
     interface propsModel {
         data: menuModel,

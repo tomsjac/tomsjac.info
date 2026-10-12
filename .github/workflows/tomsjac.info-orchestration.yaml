@@ -7,11 +7,14 @@ name: "Deploy Now: Orchestration"
 run-name: "Deploy Now: Build tomsjac.info · ${{ github.event.head_commit.message || format('Triggered by {0}', github.triggering_actor) }}"
 
 on:
-  - push
-  - workflow_dispatch
+  push:
+    branches:
+      - main-2_x
+  workflow_dispatch:
 
 jobs:
   retrieve-project:
+    if: ${{ github.ref == 'refs/heads/main-2_x' }}
     name: check readiness
     runs-on: ubuntu-latest
     outputs:
@@ -31,7 +34,7 @@ jobs:
   build:
     name: build
     needs: retrieve-project
-    if: ${{ needs.retrieve-project.outputs.deployment-enabled == 'true' }}
+    if: ${{ github.ref == 'refs/heads/main-2_x' && needs.retrieve-project.outputs.deployment-enabled == 'true' }}
     uses: ./.github/workflows/tomsjac.info-build.yaml
     with:
       site-url: https://IONOS_DEPLOY_NOW_SITE_URL
@@ -39,6 +42,7 @@ jobs:
     secrets: inherit
 
   deploy:
+    if: ${{ github.ref == 'refs/heads/main-2_x' && needs.retrieve-project.outputs.deployment-enabled == 'true' }}
     name: trigger deployment
     needs:
       - retrieve-project

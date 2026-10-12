@@ -32,9 +32,5 @@ export default defineNuxtConfig({
             { code: 'en', language: 'en-US', name: 'English' },
         ],
         vueI18n: 'i18n.config.ts',
-        bundle: {
-            // Déprécié et source de bugs en v9, sera retiré en v10
-            optimizeTranslationDirective: false,
-        },
     }
 })
