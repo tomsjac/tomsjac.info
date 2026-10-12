@@ -84,25 +84,38 @@ n’est masqué et aucune version n’est falsifiée. Ces correctifs devront êt
 retirés ou réévalués lorsque des versions corrigées seront publiées en amont.
 
 ----------------------
-## Tests de traduction
+## Tests navigateur et de rendu
 
-Les tests Playwright vérifient les traductions françaises et anglaises, les titres
-et les infobulles, la priorité de la préférence enregistrée sur la langue du
-navigateur, ainsi que le changement de langue avec `setLocale` et sa persistance.
+La suite Playwright couvre le portfolio sur ordinateur (1280 × 900) et mobile
+(Pixel 7 émulé) : sections et illustrations visibles, chargement des 16 icônes
+SVG, titres et icônes contenus dans la largeur de l’écran, affichage et fermeture
+des infobulles, et ouverture du CV avec le geste adapté au terminal. Elle couvre
+également les traductions françaises et anglaises, les titres, la préférence
+enregistrée et le changement de langue avec `setLocale` et sa persistance.
 Le portfolio ne possède pas de sélecteur de langue : le test appelle l’API du module.
 
 ```bash
 npm ci
 npx playwright install chromium
+npm run test:e2e
+```
+
+Pour lancer toute la validation (sécurité et navigateur), utilisez `npm test`.
+Pour filtrer les tests de traduction :
+
+```bash
 npm run test:i18n
 ```
 
 Les tests démarrent et arrêtent leur propre serveur Nuxt sur le port 3100.
-Les polices externes sont bloquées pendant les tests pour éviter une dépendance
-au réseau. Pour utiliser un Chromium déjà installé :
+Les polices externes sont bloquées et le lien du CV est intercepté pour éviter
+une dépendance au réseau. En cas d’échec, Playwright conserve une capture d’écran
+et une trace ; le rapport HTML peut être ouvert avec `npx playwright show-report`.
+La CI lance toute la suite et joint ces diagnostics en cas d’échec.
+Pour utiliser un Chromium déjà installé :
 
 ```bash
-PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:i18n
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e
 ```
 
 ----------------------
