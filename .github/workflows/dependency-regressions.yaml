@@ -2,8 +2,6 @@ name: Dependency regression tests
 
 on:
   pull_request:
-  push:
-    branches: [main-2_x]
 
 permissions:
   contents: read

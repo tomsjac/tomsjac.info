@@ -129,7 +129,10 @@ jobs vérifient également que la branche sélectionnée est `main-2_x`.
 Les lancements manuels de l’orchestration sont soumis à la même restriction.
 
 Les push sur les autres branches et les PR ne déclenchent pas ces déploiements.
-Les tests de PR continuent à s’exécuter dans leur workflow dédié.
+Les vérifications (sécurité, navigateur, compilation et génération) s’exécutent
+uniquement sur les PR, à leur ouverture et à chaque mise à jour. Après fusion
+sur `main-2_x`, seule la chaîne IONOS s’exécute : build, puis demande de
+déploiement si le build a réussi. Les vérifications de PR ne sont pas relancées.
 
 ----------------------
 <!-- USAGE EXAMPLES -->
