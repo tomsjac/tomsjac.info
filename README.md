@@ -47,6 +47,40 @@ http://localhost:3000
 
 
 ----------------------
+## Correctif de sécurité des dépendances Git
+
+`simple-git` est forcé à la version 4.0.2 via `overrides` pour corriger les
+vulnérabilités critiques de la branche 3.x et de son analyseur d’arguments.
+Nuxt DevTools stable 3.4.2 utilise encore l’export par défaut supprimé en v4.
+Le script `scripts/patch-devtools.mjs`, exécuté avant `nuxt prepare` lors de
+l’installation, remplace cet import par l’export nommé officiel `simpleGit`.
+Le correctif est idempotent et refuse une version de DevTools ou un contenu
+inattendus, afin d’obliger à revoir la compatibilité lors d’une mise à jour.
+Il peut être retiré avec l’override lorsque DevTools stable adoptera la v4.
+
+----------------------
+## Tests de traduction
+
+Les tests Playwright vérifient les traductions françaises et anglaises, les titres
+et les infobulles, la priorité de la préférence enregistrée sur la langue du
+navigateur, ainsi que le changement de langue avec `setLocale` et sa persistance.
+Le portfolio ne possède pas de sélecteur de langue : le test appelle l’API du module.
+
+```bash
+npm ci
+npx playwright install chromium
+npm run test:i18n
+```
+
+Les tests démarrent et arrêtent leur propre serveur Nuxt sur le port 3100.
+Les polices externes sont bloquées pendant les tests pour éviter une dépendance
+au réseau. Pour utiliser un Chromium déjà installé :
+
+```bash
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:i18n
+```
+
+----------------------
 <!-- USAGE EXAMPLES -->
 ## Utilisation
 
