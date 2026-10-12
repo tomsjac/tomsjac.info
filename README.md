@@ -119,6 +119,19 @@ PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e
 ```
 
 ----------------------
+## Déploiement IONOS
+
+Le déploiement est réservé à la branche `main-2_x` (avec un underscore).
+Un push sur cette branche lance l’orchestration IONOS, qui vérifie que le
+déploiement est activé, compile le site et demande le déploiement à IONOS.
+Le workflow de déploiement s’exécute uniquement via `workflow_dispatch` et ses
+jobs vérifient également que la branche sélectionnée est `main-2_x`.
+Les lancements manuels de l’orchestration sont soumis à la même restriction.
+
+Les push sur les autres branches et les PR ne déclenchent pas ces déploiements.
+Les tests de PR continuent à s’exécuter dans leur workflow dédié.
+
+----------------------
 <!-- USAGE EXAMPLES -->
 ## Utilisation
 
